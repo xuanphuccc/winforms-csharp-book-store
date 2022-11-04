@@ -1,4 +1,4 @@
-﻿using FontAwesome.Sharp;
+﻿using BTLCSharp.RJElements;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,24 +9,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTLCSharp
+namespace BTLCSharp.View
 {
-    public partial class fReport : Form
+    public partial class fRentalManagement : Form
     {
-        private Button currentBtn;
-        public fReport()
+        private UIBuild uiBuild = new UIBuild();
+        private RJButton currentBtn;
+
+        public fRentalManagement()
         {
             InitializeComponent();
+
+            // Default active rental section
+            ActiveButton(btnRental);
         }
 
+        
         private void ActiveButton(object senderBtn)
         {
             if (senderBtn != null)
             {
                 DisableActiveButton();
                 currentBtn = (RJButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(50, 107, 255);
-                currentBtn.ForeColor = Color.White;
+                currentBtn.BackColor = Color.FromArgb(231, 232, 254);
             }
         }
 
@@ -34,24 +39,18 @@ namespace BTLCSharp
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(231, 232, 254);
-                currentBtn.ForeColor = Color.Black;
+                currentBtn.BackColor = Color.White;
             }
         }
-
-        private void btnBooksReport_Click(object sender, EventArgs e)
+        private void btnRental_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
         }
 
-        private void btnTurnoverReport_Click(object sender, EventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
-        }
 
-        private void btnTopTurnoverReport_Click(object sender, EventArgs e)
-        {
-            ActiveButton(sender);
         }
     }
 }

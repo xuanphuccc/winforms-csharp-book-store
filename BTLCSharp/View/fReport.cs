@@ -1,4 +1,5 @@
-﻿using FontAwesome.Sharp;
+﻿using BTLCSharp.RJElements;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,15 +12,15 @@ using System.Windows.Forms;
 
 namespace BTLCSharp
 {
-    public partial class fBookManagement : Form
+    public partial class fReport : Form
     {
-        public RJButton currentBtn;
-        public fBookManagement()
+        private Button currentBtn;
+        public fReport()
         {
             InitializeComponent();
 
-            // Default active search books
-            ActiveButton(btnSearchCategory);
+            // Default active book report
+            ActiveButton(btnBooksReport);
         }
 
         private void ActiveButton(object senderBtn)
@@ -28,8 +29,7 @@ namespace BTLCSharp
             {
                 DisableActiveButton();
                 currentBtn = (RJButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(50, 107, 255);
-                currentBtn.ForeColor = Color.White;
+                currentBtn.BackColor = Color.FromArgb(231, 232, 254);
             }
         }
 
@@ -37,17 +37,21 @@ namespace BTLCSharp
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(231, 232, 254);
-                currentBtn.ForeColor = Color.Black;
+                currentBtn.BackColor = Color.White;
             }
         }
 
-        private void btnSearchCategory_Click(object sender, EventArgs e)
+        private void btnBooksReport_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
         }
 
-        private void btnAddBook_Click(object sender, EventArgs e)
+        private void btnTurnoverReport_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender);
+        }
+
+        private void btnTopTurnoverReport_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
         }

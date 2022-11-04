@@ -1,4 +1,6 @@
-﻿namespace BTLCSharp
+﻿using BTLCSharp.RJElements;
+
+namespace BTLCSharp
 {
     partial class fReport
     {
@@ -30,9 +32,9 @@
         {
             this.dgvReport = new System.Windows.Forms.DataGridView();
             this.pnlControls = new System.Windows.Forms.Panel();
-            this.btnTopTurnoverReport = new BTLCSharp.RJButton();
-            this.btnTurnoverReport = new BTLCSharp.RJButton();
-            this.btnBooksReport = new BTLCSharp.RJButton();
+            this.btnTopTurnoverReport = new RJButton();
+            this.btnTurnoverReport = new RJButton();
+            this.btnBooksReport = new RJButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.pnlControls.SuspendLayout();
@@ -56,7 +58,7 @@
             // 
             this.pnlControls.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlControls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
+            this.pnlControls.BackColor = System.Drawing.Color.White;
             this.pnlControls.Controls.Add(this.btnTopTurnoverReport);
             this.pnlControls.Controls.Add(this.btnTurnoverReport);
             this.pnlControls.Controls.Add(this.btnBooksReport);
@@ -69,18 +71,19 @@
             // btnTopTurnoverReport
             // 
             this.btnTopTurnoverReport.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnTopTurnoverReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
-            this.btnTopTurnoverReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
+            this.btnTopTurnoverReport.BackColor = System.Drawing.Color.White;
+            this.btnTopTurnoverReport.BackgroundColor = System.Drawing.Color.White;
             this.btnTopTurnoverReport.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
             this.btnTopTurnoverReport.BorderRadius = 6;
-            this.btnTopTurnoverReport.BorderSize = 2;
+            this.btnTopTurnoverReport.BorderSize = 0;
             this.btnTopTurnoverReport.FlatAppearance.BorderSize = 0;
             this.btnTopTurnoverReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTopTurnoverReport.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTopTurnoverReport.ForeColor = System.Drawing.Color.Black;
-            this.btnTopTurnoverReport.Location = new System.Drawing.Point(373, 13);
+            this.btnTopTurnoverReport.Location = new System.Drawing.Point(276, 13);
             this.btnTopTurnoverReport.Name = "btnTopTurnoverReport";
-            this.btnTopTurnoverReport.Size = new System.Drawing.Size(190, 42);
+            this.btnTopTurnoverReport.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnTopTurnoverReport.Size = new System.Drawing.Size(171, 42);
             this.btnTopTurnoverReport.TabIndex = 3;
             this.btnTopTurnoverReport.Text = "Top doanh thu";
             this.btnTopTurnoverReport.TextColor = System.Drawing.Color.Black;
@@ -90,18 +93,19 @@
             // btnTurnoverReport
             // 
             this.btnTurnoverReport.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnTurnoverReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
-            this.btnTurnoverReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
+            this.btnTurnoverReport.BackColor = System.Drawing.Color.White;
+            this.btnTurnoverReport.BackgroundColor = System.Drawing.Color.White;
             this.btnTurnoverReport.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
             this.btnTurnoverReport.BorderRadius = 6;
-            this.btnTurnoverReport.BorderSize = 2;
+            this.btnTurnoverReport.BorderSize = 0;
             this.btnTurnoverReport.FlatAppearance.BorderSize = 0;
             this.btnTurnoverReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTurnoverReport.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTurnoverReport.ForeColor = System.Drawing.Color.Black;
-            this.btnTurnoverReport.Location = new System.Drawing.Point(195, 13);
+            this.btnTurnoverReport.Location = new System.Drawing.Point(135, 13);
             this.btnTurnoverReport.Name = "btnTurnoverReport";
-            this.btnTurnoverReport.Size = new System.Drawing.Size(150, 42);
+            this.btnTurnoverReport.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnTurnoverReport.Size = new System.Drawing.Size(135, 42);
             this.btnTurnoverReport.TabIndex = 2;
             this.btnTurnoverReport.Text = "Doanh thu";
             this.btnTurnoverReport.TextColor = System.Drawing.Color.Black;
@@ -111,18 +115,19 @@
             // btnBooksReport
             // 
             this.btnBooksReport.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnBooksReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
-            this.btnBooksReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
+            this.btnBooksReport.BackColor = System.Drawing.Color.White;
+            this.btnBooksReport.BackgroundColor = System.Drawing.Color.White;
             this.btnBooksReport.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
             this.btnBooksReport.BorderRadius = 6;
-            this.btnBooksReport.BorderSize = 2;
+            this.btnBooksReport.BorderSize = 0;
             this.btnBooksReport.FlatAppearance.BorderSize = 0;
             this.btnBooksReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBooksReport.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBooksReport.ForeColor = System.Drawing.Color.Black;
-            this.btnBooksReport.Location = new System.Drawing.Point(19, 13);
+            this.btnBooksReport.Location = new System.Drawing.Point(0, 13);
             this.btnBooksReport.Name = "btnBooksReport";
-            this.btnBooksReport.Size = new System.Drawing.Size(150, 42);
+            this.btnBooksReport.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnBooksReport.Size = new System.Drawing.Size(129, 42);
             this.btnBooksReport.TabIndex = 1;
             this.btnBooksReport.Text = "Thuê sách";
             this.btnBooksReport.TextColor = System.Drawing.Color.Black;
@@ -160,6 +165,7 @@
             this.ClientSize = new System.Drawing.Size(1033, 615);
             this.Controls.Add(this.pnlControls);
             this.Controls.Add(this.dgvReport);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fReport";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();

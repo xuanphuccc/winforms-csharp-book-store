@@ -1,10 +1,12 @@
-﻿using FontAwesome.Sharp;
+﻿using BTLCSharp.View;
+using FontAwesome.Sharp;
 using System.Runtime.InteropServices;
 
 namespace BTLCSharp
 {
     public partial class fHome : Form
     {
+        new UIBuild uiBuild = new UIBuild(); 
         private IconButton currentBtn;
         private Panel borderLeftBtn;
         private Panel bottomBorder;
@@ -79,23 +81,6 @@ namespace BTLCSharp
             }
         }
 
-        private void OpenChildForm(Form childForm)
-        {
-            if(currentChildForm != null)
-            {
-                // Open only form
-                currentChildForm.Close();
-            }
-
-            currentChildForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            pnlMain.Controls.Add(childForm);
-            pnlMain.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
 
         // Drag form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -113,35 +98,43 @@ namespace BTLCSharp
             ActiveButton(sender);
 
             // Close curent child form
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
+            uiBuild.CloseCurrentChildForm();
         }
 
         private void btnBookManagement_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
 
-            OpenChildForm(new fBookManagement());
+            uiBuild.OpenChildForm(new fBookManagement(), pnlMain);
         }
 
         private void btnRental_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+
+            uiBuild.OpenChildForm(new fRentalManagement(), pnlMain);
         }
 
         private void btnClient_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+
+            uiBuild.OpenChildForm(new fClientManagement(), pnlMain);
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
 
-            OpenChildForm(new fReport());
+            uiBuild.OpenChildForm(new fReport(), pnlMain);
 
+        }
+
+        private void btnStaffManagement_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender);
+
+            uiBuild.OpenChildForm(new fStaffManagement(), pnlMain);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -159,10 +152,7 @@ namespace BTLCSharp
             //borderLeftBtn.Visible = false;
 
             // Close curent child form
-            if(currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
+            uiBuild.CloseCurrentChildForm();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -179,5 +169,6 @@ namespace BTLCSharp
             else WindowState = FormWindowState.Normal;
         }
 
+        
     }
 }

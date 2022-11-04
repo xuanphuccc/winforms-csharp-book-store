@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnStaffManagement = new FontAwesome.Sharp.IconButton();
             this.btnReport = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnClient = new FontAwesome.Sharp.IconButton();
@@ -67,6 +68,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlMenu.AutoScroll = true;
             this.pnlMenu.BackColor = System.Drawing.Color.White;
+            this.pnlMenu.Controls.Add(this.btnStaffManagement);
             this.pnlMenu.Controls.Add(this.btnReport);
             this.pnlMenu.Controls.Add(this.iconButton1);
             this.pnlMenu.Controls.Add(this.btnClient);
@@ -78,6 +80,30 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(300, 732);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // btnStaffManagement
+            // 
+            this.btnStaffManagement.BackColor = System.Drawing.Color.White;
+            this.btnStaffManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStaffManagement.FlatAppearance.BorderSize = 0;
+            this.btnStaffManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaffManagement.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnStaffManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnStaffManagement.IconChar = FontAwesome.Sharp.IconChar.ClipboardUser;
+            this.btnStaffManagement.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(52)))), ((int)(((byte)(255)))));
+            this.btnStaffManagement.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnStaffManagement.IconSize = 32;
+            this.btnStaffManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStaffManagement.Location = new System.Drawing.Point(0, 534);
+            this.btnStaffManagement.Name = "btnStaffManagement";
+            this.btnStaffManagement.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnStaffManagement.Size = new System.Drawing.Size(300, 72);
+            this.btnStaffManagement.TabIndex = 7;
+            this.btnStaffManagement.Text = "Nhân viên";
+            this.btnStaffManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStaffManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStaffManagement.UseVisualStyleBackColor = false;
+            this.btnStaffManagement.Click += new System.EventHandler(this.btnStaffManagement_Click);
             // 
             // btnReport
             // 
@@ -399,7 +425,7 @@
             this.pnlBody.Size = new System.Drawing.Size(1070, 730);
             this.pnlBody.TabIndex = 4;
             // 
-            // Home
+            // fHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -410,7 +436,7 @@
             this.Controls.Add(this.pnlMenu);
             this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(1000, 600);
-            this.Name = "Home";
+            this.Name = "fHome";
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -450,5 +476,6 @@
         private FontAwesome.Sharp.IconButton btnReport;
         private Panel pnlBody;
         private PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnStaffManagement;
     }
 }
