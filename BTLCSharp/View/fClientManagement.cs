@@ -1,4 +1,6 @@
-﻿using BTLCSharp.RJElements;
+﻿using BTLCSharp.Controllers;
+using BTLCSharp.Model;
+using BTLCSharp.RJElements;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +16,8 @@ namespace BTLCSharp.View
     public partial class fClientManagement : Form
     {
         private UIBuild uiBuild = new UIBuild();
-        private RJButton currentBtn;
+        private RJButton ?currentBtn;
+        private Panel ?parrentPnl;
 
         public fClientManagement()
         {
@@ -22,7 +25,7 @@ namespace BTLCSharp.View
 
             // Default active search client
             ActiveButton(btnSearchClient);
-            uiBuild.OpenChildForm(new fSearchComponent(), pnlSearchBody);
+            uiBuild.OpenChildForm(new fClientSearchComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
 
         private void ActiveButton(object senderBtn)
@@ -46,13 +49,16 @@ namespace BTLCSharp.View
         private void btnSearchClient_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
-            uiBuild.OpenChildForm(new fSearchComponent(), pnlSearchBody);
+            uiBuild.OpenChildForm(new fClientSearchComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
-            uiBuild.OpenChildForm(new fAddClientComponent(), pnlSearchBody);
+            Form addClientForm = new fAddClientComponent(uiBuild, pnlSearchBody);
+            
+            uiBuild.OpenChildForm(addClientForm, pnlSearchBody);
+            
         }
     }
 }

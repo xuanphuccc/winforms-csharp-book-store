@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BTLCSharp.View
 {
-    internal class UIBuild
+    public class UIBuild
     {
         private Form currentChildForm;
 

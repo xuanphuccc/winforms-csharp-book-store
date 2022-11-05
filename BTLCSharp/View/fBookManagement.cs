@@ -23,9 +23,6 @@ namespace BTLCSharp
 
             // Default active search books
             ActiveButton(btnSearchCategory);
-
-            //
-            uiBuild.OpenChildForm(new fSearchComponent(), pnlSearchBody);
         }
 
         private void ActiveButton(object senderBtn)
@@ -49,8 +46,6 @@ namespace BTLCSharp
         private void btnSearchCategory_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
-
-            uiBuild.OpenChildForm(new fSearchComponent(), pnlSearchBody);
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)

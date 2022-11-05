@@ -437,6 +437,7 @@
             this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "fHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

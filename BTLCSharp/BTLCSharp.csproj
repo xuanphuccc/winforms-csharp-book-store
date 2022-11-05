@@ -9,8 +9,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\net6.0-windows\BTLCSharp.deps.json" />
+    <Content Include="bin\Debug\net6.0-windows\BTLCSharp.runtimeconfig.json" />
+    <Content Include="bin\Debug\net6.0-windows\Resourse\imgs\background.png" />
+    <Content Include="bin\Debug\net6.0-windows\Resourse\imgs\background2.jpg" />
+    <Content Include="bin\Debug\net6.0-windows\Resourse\imgs\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net6.0-windows\BTLCSharp.dll" />
+    <None Include="bin\Debug\net6.0-windows\BTLCSharp.exe" />
+    <None Include="bin\Debug\net6.0-windows\BTLCSharp.pdb" />
+    <None Include="bin\Debug\net6.0-windows\Database\BTLCSharp.mdf" />
+    <None Include="bin\Debug\net6.0-windows\Database\BTLCSharp_log.ldf" />
+    <None Include="bin\Debug\net6.0-windows\FontAwesome.Sharp.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net6.0-windows\System.Data.SqlClient.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.1.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
   </ItemGroup>
 
   <ItemGroup>

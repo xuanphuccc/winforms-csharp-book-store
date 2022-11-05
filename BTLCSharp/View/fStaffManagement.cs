@@ -22,7 +22,6 @@ namespace BTLCSharp.View
 
             // Default active search staff
             ActiveButton(btnSearchStaff);
-            uIBuild.OpenChildForm(new fSearchComponent(), pnlSearchBody);
         }
 
         private void ActiveButton(object senderBtn)
@@ -47,8 +46,6 @@ namespace BTLCSharp.View
         private void btnSearchStaff_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
-
-            uIBuild.OpenChildForm(new fSearchComponent(), pnlSearchBody);
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
