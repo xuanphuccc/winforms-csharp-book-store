@@ -16,13 +16,15 @@ namespace BTLCSharp
     public partial class fBookManagement : Form
     {
         private UIBuild uiBuild = new UIBuild();
-        private RJButton currentBtn;
+        private RJButton ?currentBtn;
         public fBookManagement()
         {
             InitializeComponent();
 
             // Default active search books
-            ActiveButton(btnSearchCategory);
+            ActiveButton(btnSearchBook);
+            uiBuild.OpenChildForm(new fBookSearchComponent(uiBuild, pnlSearchBody), pnlSearchBody);
+
         }
 
         private void ActiveButton(object senderBtn)
@@ -46,13 +48,13 @@ namespace BTLCSharp
         private void btnSearchCategory_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+            uiBuild.OpenChildForm(new fBookSearchComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
-
-            uiBuild.OpenChildForm(new fAddBookComponent(), pnlSearchBody);
+            uiBuild.OpenChildForm(new fAddBookComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
     }
 }

@@ -34,6 +34,7 @@ namespace BTLCSharp.View
             this.btnDetail = new BTLCSharp.RJElements.RJButton();
             this.btnDelete = new BTLCSharp.RJElements.RJButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAll = new BTLCSharp.RJElements.RJButton();
             this.btnSearch = new BTLCSharp.RJElements.RJButton();
             this.txtSearch = new BTLCSharp.RJTextBox();
             this.gboSearch = new BTLCSharp.RJElements.RJComboBox();
@@ -101,6 +102,7 @@ namespace BTLCSharp.View
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.btnAll);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.gboSearch);
@@ -108,6 +110,27 @@ namespace BTLCSharp.View
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(954, 73);
             this.panel2.TabIndex = 0;
+            // 
+            // btnAll
+            // 
+            this.btnAll.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnAll.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnAll.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAll.BorderRadius = 6;
+            this.btnAll.BorderSize = 0;
+            this.btnAll.FlatAppearance.BorderSize = 0;
+            this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAll.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAll.ForeColor = System.Drawing.Color.White;
+            this.btnAll.Location = new System.Drawing.Point(785, 14);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(143, 46);
+            this.btnAll.TabIndex = 7;
+            this.btnAll.Text = "Tất cả";
+            this.btnAll.TextColor = System.Drawing.Color.White;
+            this.btnAll.UseVisualStyleBackColor = false;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // btnSearch
             // 
@@ -121,7 +144,7 @@ namespace BTLCSharp.View
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(683, 14);
+            this.btnSearch.Location = new System.Drawing.Point(580, 14);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(184, 46);
             this.btnSearch.TabIndex = 6;
@@ -140,14 +163,14 @@ namespace BTLCSharp.View
             this.txtSearch.BorderSize = 2;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtSearch.Location = new System.Drawing.Point(282, 14);
+            this.txtSearch.Location = new System.Drawing.Point(242, 14);
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Padding = new System.Windows.Forms.Padding(10);
             this.txtSearch.PasswordChar = false;
             this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSearch.PlaceholderText = "";
-            this.txtSearch.Size = new System.Drawing.Size(375, 46);
+            this.txtSearch.Size = new System.Drawing.Size(314, 46);
             this.txtSearch.TabIndex = 4;
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
@@ -163,23 +186,24 @@ namespace BTLCSharp.View
             this.gboSearch.ForeColor = System.Drawing.Color.Black;
             this.gboSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
             this.gboSearch.Items.AddRange(new object[] {
-            "Tên sách",
-            "Lĩnh vực",
-            "Tác giả",
-            "Nhà xuất bản"});
+            "Tên khách hàng",
+            "Mã khách hàng",
+            "Giới Tính"});
             this.gboSearch.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.gboSearch.ListTextColor = System.Drawing.Color.Black;
             this.gboSearch.Location = new System.Drawing.Point(19, 14);
             this.gboSearch.MinimumSize = new System.Drawing.Size(200, 30);
             this.gboSearch.Name = "gboSearch";
             this.gboSearch.Padding = new System.Windows.Forms.Padding(2);
-            this.gboSearch.Size = new System.Drawing.Size(236, 46);
+            this.gboSearch.Size = new System.Drawing.Size(200, 46);
             this.gboSearch.TabIndex = 3;
             this.gboSearch.Texts = "Tìm kiếm theo";
             // 
             // dgvData
             // 
-            this.dgvData.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Location = new System.Drawing.Point(0, 92);
@@ -188,8 +212,6 @@ namespace BTLCSharp.View
             this.dgvData.RowTemplate.Height = 33;
             this.dgvData.Size = new System.Drawing.Size(954, 327);
             this.dgvData.TabIndex = 2;
-            this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
-            this.dgvData.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellLeave);
             // 
             // fClientSearchComponent
             // 
@@ -221,5 +243,6 @@ namespace BTLCSharp.View
         private RJButton btnDetail;
         private RJButton btnDelete;
         private DataGridView dgvData;
+        private RJButton btnAll;
     }
 }

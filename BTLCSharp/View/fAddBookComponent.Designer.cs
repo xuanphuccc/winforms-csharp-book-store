@@ -30,92 +30,76 @@ namespace BTLCSharp
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbBookImage = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.rjComboBox5 = new BTLCSharp.RJElements.RJComboBox();
+            this.cboLanguages = new BTLCSharp.RJElements.RJComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.rjComboBox4 = new BTLCSharp.RJElements.RJComboBox();
+            this.cboPublishingCpn = new BTLCSharp.RJElements.RJComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.rjComboBox3 = new BTLCSharp.RJElements.RJComboBox();
+            this.cboAuthors = new BTLCSharp.RJElements.RJComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.rjComboBox2 = new BTLCSharp.RJElements.RJComboBox();
+            this.cboSectors = new BTLCSharp.RJElements.RJComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.rjTextBox6 = new BTLCSharp.RJTextBox();
+            this.txtTotalPages = new BTLCSharp.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.rjTextBox5 = new BTLCSharp.RJTextBox();
+            this.txtQuantity = new BTLCSharp.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rjTextBox3 = new BTLCSharp.RJTextBox();
+            this.txtRentalPrice = new BTLCSharp.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new BTLCSharp.RJTextBox();
-            this.rjComboBox1 = new BTLCSharp.RJElements.RJComboBox();
+            this.txtPrice = new BTLCSharp.RJTextBox();
+            this.cboBookTypes = new BTLCSharp.RJElements.RJComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new BTLCSharp.RJTextBox();
+            this.txtName = new BTLCSharp.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox4 = new BTLCSharp.RJTextBox();
+            this.txtId = new BTLCSharp.RJTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rjButton1 = new BTLCSharp.RJElements.RJButton();
-            this.rjButton2 = new BTLCSharp.RJElements.RJButton();
-            this.panel1.SuspendLayout();
+            this.btnCancel = new BTLCSharp.RJElements.RJButton();
+            this.btnSave = new BTLCSharp.RJElements.RJButton();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBookImage)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(954, 499);
-            this.panel1.TabIndex = 0;
-            // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.ptbBookImage);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.rjComboBox5);
+            this.panel3.Controls.Add(this.cboLanguages);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.rjComboBox4);
+            this.panel3.Controls.Add(this.cboPublishingCpn);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.rjComboBox3);
+            this.panel3.Controls.Add(this.cboAuthors);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.rjComboBox2);
+            this.panel3.Controls.Add(this.cboSectors);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.rjTextBox6);
+            this.panel3.Controls.Add(this.txtTotalPages);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.rjTextBox5);
+            this.panel3.Controls.Add(this.txtQuantity);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.rjTextBox3);
+            this.panel3.Controls.Add(this.txtRentalPrice);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.rjTextBox2);
-            this.panel3.Controls.Add(this.rjComboBox1);
+            this.panel3.Controls.Add(this.txtPrice);
+            this.panel3.Controls.Add(this.cboBookTypes);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.rjTextBox1);
+            this.panel3.Controls.Add(this.txtName);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.rjTextBox4);
+            this.panel3.Controls.Add(this.txtId);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(954, 423);
             this.panel3.TabIndex = 1;
             // 
-            // pictureBox1
+            // ptbBookImage
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(711, 105);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 208);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.ptbBookImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbBookImage.Location = new System.Drawing.Point(711, 105);
+            this.ptbBookImage.Name = "ptbBookImage";
+            this.ptbBookImage.Size = new System.Drawing.Size(208, 208);
+            this.ptbBookImage.TabIndex = 25;
+            this.ptbBookImage.TabStop = false;
             // 
             // label11
             // 
@@ -129,24 +113,24 @@ namespace BTLCSharp
             this.label11.TabIndex = 24;
             this.label11.Text = "Ngôn ngữ";
             // 
-            // rjComboBox5
+            // cboLanguages
             // 
-            this.rjComboBox5.BackColor = System.Drawing.Color.White;
-            this.rjComboBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjComboBox5.BorderSize = 2;
-            this.rjComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox5.ForeColor = System.Drawing.Color.Black;
-            this.rjComboBox5.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox5.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox5.ListTextColor = System.Drawing.Color.Black;
-            this.rjComboBox5.Location = new System.Drawing.Point(500, 183);
-            this.rjComboBox5.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox5.Name = "rjComboBox5";
-            this.rjComboBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox5.Size = new System.Drawing.Size(200, 46);
-            this.rjComboBox5.TabIndex = 23;
-            this.rjComboBox5.Texts = "";
+            this.cboLanguages.BackColor = System.Drawing.Color.White;
+            this.cboLanguages.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.cboLanguages.BorderSize = 2;
+            this.cboLanguages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cboLanguages.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboLanguages.ForeColor = System.Drawing.Color.Black;
+            this.cboLanguages.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cboLanguages.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cboLanguages.ListTextColor = System.Drawing.Color.Black;
+            this.cboLanguages.Location = new System.Drawing.Point(500, 183);
+            this.cboLanguages.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cboLanguages.Name = "cboLanguages";
+            this.cboLanguages.Padding = new System.Windows.Forms.Padding(2);
+            this.cboLanguages.Size = new System.Drawing.Size(200, 46);
+            this.cboLanguages.TabIndex = 23;
+            this.cboLanguages.Texts = "";
             // 
             // label10
             // 
@@ -160,24 +144,24 @@ namespace BTLCSharp
             this.label10.TabIndex = 22;
             this.label10.Text = "Nhà xuất bản";
             // 
-            // rjComboBox4
+            // cboPublishingCpn
             // 
-            this.rjComboBox4.BackColor = System.Drawing.Color.White;
-            this.rjComboBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjComboBox4.BorderSize = 2;
-            this.rjComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox4.ForeColor = System.Drawing.Color.Black;
-            this.rjComboBox4.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox4.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox4.ListTextColor = System.Drawing.Color.Black;
-            this.rjComboBox4.Location = new System.Drawing.Point(711, 351);
-            this.rjComboBox4.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox4.Name = "rjComboBox4";
-            this.rjComboBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox4.Size = new System.Drawing.Size(208, 46);
-            this.rjComboBox4.TabIndex = 21;
-            this.rjComboBox4.Texts = "";
+            this.cboPublishingCpn.BackColor = System.Drawing.Color.White;
+            this.cboPublishingCpn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.cboPublishingCpn.BorderSize = 2;
+            this.cboPublishingCpn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cboPublishingCpn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboPublishingCpn.ForeColor = System.Drawing.Color.Black;
+            this.cboPublishingCpn.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cboPublishingCpn.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cboPublishingCpn.ListTextColor = System.Drawing.Color.Black;
+            this.cboPublishingCpn.Location = new System.Drawing.Point(711, 351);
+            this.cboPublishingCpn.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cboPublishingCpn.Name = "cboPublishingCpn";
+            this.cboPublishingCpn.Padding = new System.Windows.Forms.Padding(2);
+            this.cboPublishingCpn.Size = new System.Drawing.Size(208, 46);
+            this.cboPublishingCpn.TabIndex = 21;
+            this.cboPublishingCpn.Texts = "";
             // 
             // label9
             // 
@@ -191,24 +175,24 @@ namespace BTLCSharp
             this.label9.TabIndex = 20;
             this.label9.Text = "Tác giả";
             // 
-            // rjComboBox3
+            // cboAuthors
             // 
-            this.rjComboBox3.BackColor = System.Drawing.Color.White;
-            this.rjComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjComboBox3.BorderSize = 2;
-            this.rjComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox3.ForeColor = System.Drawing.Color.Black;
-            this.rjComboBox3.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox3.ListTextColor = System.Drawing.Color.Black;
-            this.rjComboBox3.Location = new System.Drawing.Point(500, 351);
-            this.rjComboBox3.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox3.Name = "rjComboBox3";
-            this.rjComboBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox3.Size = new System.Drawing.Size(200, 46);
-            this.rjComboBox3.TabIndex = 19;
-            this.rjComboBox3.Texts = "";
+            this.cboAuthors.BackColor = System.Drawing.Color.White;
+            this.cboAuthors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.cboAuthors.BorderSize = 2;
+            this.cboAuthors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cboAuthors.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboAuthors.ForeColor = System.Drawing.Color.Black;
+            this.cboAuthors.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cboAuthors.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cboAuthors.ListTextColor = System.Drawing.Color.Black;
+            this.cboAuthors.Location = new System.Drawing.Point(500, 351);
+            this.cboAuthors.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cboAuthors.Name = "cboAuthors";
+            this.cboAuthors.Padding = new System.Windows.Forms.Padding(2);
+            this.cboAuthors.Size = new System.Drawing.Size(200, 46);
+            this.cboAuthors.TabIndex = 19;
+            this.cboAuthors.Texts = "";
             // 
             // label8
             // 
@@ -222,24 +206,24 @@ namespace BTLCSharp
             this.label8.TabIndex = 18;
             this.label8.Text = "Lĩnh vực";
             // 
-            // rjComboBox2
+            // cboSectors
             // 
-            this.rjComboBox2.BackColor = System.Drawing.Color.White;
-            this.rjComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjComboBox2.BorderSize = 2;
-            this.rjComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.rjComboBox2.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox2.ListTextColor = System.Drawing.Color.Black;
-            this.rjComboBox2.Location = new System.Drawing.Point(500, 267);
-            this.rjComboBox2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox2.Name = "rjComboBox2";
-            this.rjComboBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox2.Size = new System.Drawing.Size(200, 46);
-            this.rjComboBox2.TabIndex = 17;
-            this.rjComboBox2.Texts = "";
+            this.cboSectors.BackColor = System.Drawing.Color.White;
+            this.cboSectors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.cboSectors.BorderSize = 2;
+            this.cboSectors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cboSectors.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboSectors.ForeColor = System.Drawing.Color.Black;
+            this.cboSectors.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cboSectors.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cboSectors.ListTextColor = System.Drawing.Color.Black;
+            this.cboSectors.Location = new System.Drawing.Point(500, 267);
+            this.cboSectors.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cboSectors.Name = "cboSectors";
+            this.cboSectors.Padding = new System.Windows.Forms.Padding(2);
+            this.cboSectors.Size = new System.Drawing.Size(200, 46);
+            this.cboSectors.TabIndex = 17;
+            this.cboSectors.Texts = "";
             // 
             // label7
             // 
@@ -265,27 +249,27 @@ namespace BTLCSharp
             this.label6.TabIndex = 15;
             this.label6.Text = "Số trang";
             // 
-            // rjTextBox6
+            // txtTotalPages
             // 
-            this.rjTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox6.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox6.BorderRadius = 6;
-            this.rjTextBox6.BorderSize = 2;
-            this.rjTextBox6.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox6.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox6.Location = new System.Drawing.Point(234, 183);
-            this.rjTextBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 3);
-            this.rjTextBox6.Multiline = false;
-            this.rjTextBox6.Name = "rjTextBox6";
-            this.rjTextBox6.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox6.PasswordChar = false;
-            this.rjTextBox6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox6.PlaceholderText = "";
-            this.rjTextBox6.Size = new System.Drawing.Size(208, 46);
-            this.rjTextBox6.TabIndex = 14;
-            this.rjTextBox6.Texts = "";
-            this.rjTextBox6.UnderlinedStyle = false;
+            this.txtTotalPages.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTotalPages.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtTotalPages.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTotalPages.BorderRadius = 6;
+            this.txtTotalPages.BorderSize = 2;
+            this.txtTotalPages.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTotalPages.ForeColor = System.Drawing.Color.Black;
+            this.txtTotalPages.Location = new System.Drawing.Point(234, 183);
+            this.txtTotalPages.Margin = new System.Windows.Forms.Padding(3, 4, 3, 3);
+            this.txtTotalPages.Multiline = false;
+            this.txtTotalPages.Name = "txtTotalPages";
+            this.txtTotalPages.Padding = new System.Windows.Forms.Padding(10);
+            this.txtTotalPages.PasswordChar = false;
+            this.txtTotalPages.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTotalPages.PlaceholderText = "";
+            this.txtTotalPages.Size = new System.Drawing.Size(208, 46);
+            this.txtTotalPages.TabIndex = 14;
+            this.txtTotalPages.Texts = "";
+            this.txtTotalPages.UnderlinedStyle = false;
             // 
             // label5
             // 
@@ -299,27 +283,27 @@ namespace BTLCSharp
             this.label5.TabIndex = 13;
             this.label5.Text = "Số lượng";
             // 
-            // rjTextBox5
+            // txtQuantity
             // 
-            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox5.BorderRadius = 6;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox5.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox5.Location = new System.Drawing.Point(309, 351);
-            this.rjTextBox5.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox5.PlaceholderText = "";
-            this.rjTextBox5.Size = new System.Drawing.Size(133, 46);
-            this.rjTextBox5.TabIndex = 12;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderlinedStyle = false;
+            this.txtQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txtQuantity.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtQuantity.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtQuantity.BorderRadius = 6;
+            this.txtQuantity.BorderSize = 2;
+            this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtQuantity.ForeColor = System.Drawing.Color.Black;
+            this.txtQuantity.Location = new System.Drawing.Point(309, 351);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
+            this.txtQuantity.Multiline = false;
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Padding = new System.Windows.Forms.Padding(10);
+            this.txtQuantity.PasswordChar = false;
+            this.txtQuantity.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtQuantity.PlaceholderText = "";
+            this.txtQuantity.Size = new System.Drawing.Size(133, 46);
+            this.txtQuantity.TabIndex = 12;
+            this.txtQuantity.Texts = "";
+            this.txtQuantity.UnderlinedStyle = false;
             // 
             // label4
             // 
@@ -333,26 +317,26 @@ namespace BTLCSharp
             this.label4.TabIndex = 11;
             this.label4.Text = "Giá cho thuê";
             // 
-            // rjTextBox3
+            // txtRentalPrice
             // 
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox3.BorderRadius = 6;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox3.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox3.Location = new System.Drawing.Point(19, 351);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "";
-            this.rjTextBox3.Size = new System.Drawing.Size(283, 46);
-            this.rjTextBox3.TabIndex = 10;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
+            this.txtRentalPrice.BackColor = System.Drawing.SystemColors.Window;
+            this.txtRentalPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtRentalPrice.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtRentalPrice.BorderRadius = 6;
+            this.txtRentalPrice.BorderSize = 2;
+            this.txtRentalPrice.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtRentalPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtRentalPrice.Location = new System.Drawing.Point(19, 351);
+            this.txtRentalPrice.Multiline = false;
+            this.txtRentalPrice.Name = "txtRentalPrice";
+            this.txtRentalPrice.Padding = new System.Windows.Forms.Padding(10);
+            this.txtRentalPrice.PasswordChar = false;
+            this.txtRentalPrice.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtRentalPrice.PlaceholderText = "";
+            this.txtRentalPrice.Size = new System.Drawing.Size(283, 46);
+            this.txtRentalPrice.TabIndex = 10;
+            this.txtRentalPrice.Texts = "";
+            this.txtRentalPrice.UnderlinedStyle = false;
             // 
             // label3
             // 
@@ -366,45 +350,45 @@ namespace BTLCSharp
             this.label3.TabIndex = 9;
             this.label3.Text = "Giá sách";
             // 
-            // rjTextBox2
+            // txtPrice
             // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 6;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox2.Location = new System.Drawing.Point(19, 267);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(423, 46);
-            this.rjTextBox2.TabIndex = 8;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
+            this.txtPrice.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPrice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtPrice.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPrice.BorderRadius = 6;
+            this.txtPrice.BorderSize = 2;
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtPrice.Location = new System.Drawing.Point(19, 267);
+            this.txtPrice.Multiline = false;
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Padding = new System.Windows.Forms.Padding(10);
+            this.txtPrice.PasswordChar = false;
+            this.txtPrice.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPrice.PlaceholderText = "";
+            this.txtPrice.Size = new System.Drawing.Size(423, 46);
+            this.txtPrice.TabIndex = 8;
+            this.txtPrice.Texts = "";
+            this.txtPrice.UnderlinedStyle = false;
             // 
-            // rjComboBox1
+            // cboBookTypes
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.White;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjComboBox1.BorderSize = 2;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.Black;
-            this.rjComboBox1.Location = new System.Drawing.Point(500, 99);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox1.Size = new System.Drawing.Size(200, 46);
-            this.rjComboBox1.TabIndex = 7;
-            this.rjComboBox1.Texts = "";
+            this.cboBookTypes.BackColor = System.Drawing.Color.White;
+            this.cboBookTypes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.cboBookTypes.BorderSize = 2;
+            this.cboBookTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cboBookTypes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboBookTypes.ForeColor = System.Drawing.Color.Black;
+            this.cboBookTypes.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cboBookTypes.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cboBookTypes.ListTextColor = System.Drawing.Color.Black;
+            this.cboBookTypes.Location = new System.Drawing.Point(500, 99);
+            this.cboBookTypes.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cboBookTypes.Name = "cboBookTypes";
+            this.cboBookTypes.Padding = new System.Windows.Forms.Padding(2);
+            this.cboBookTypes.Size = new System.Drawing.Size(200, 46);
+            this.cboBookTypes.TabIndex = 7;
+            this.cboBookTypes.Texts = "";
             // 
             // label2
             // 
@@ -418,26 +402,26 @@ namespace BTLCSharp
             this.label2.TabIndex = 6;
             this.label2.Text = "Tên sách";
             // 
-            // rjTextBox1
+            // txtName
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 6;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox1.Location = new System.Drawing.Point(19, 99);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(423, 46);
-            this.rjTextBox1.TabIndex = 5;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txtName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtName.BorderRadius = 6;
+            this.txtName.BorderSize = 2;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.Location = new System.Drawing.Point(19, 99);
+            this.txtName.Multiline = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceholderText = "";
+            this.txtName.Size = new System.Drawing.Size(423, 46);
+            this.txtName.TabIndex = 5;
+            this.txtName.Texts = "";
+            this.txtName.UnderlinedStyle = false;
             // 
             // label1
             // 
@@ -450,126 +434,128 @@ namespace BTLCSharp
             this.label1.TabIndex = 4;
             this.label1.Text = "Mã sách";
             // 
-            // rjTextBox4
+            // txtId
             // 
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox4.BorderRadius = 6;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox4.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox4.Location = new System.Drawing.Point(19, 183);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "";
-            this.rjTextBox4.Size = new System.Drawing.Size(208, 46);
-            this.rjTextBox4.TabIndex = 3;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
+            this.txtId.BackColor = System.Drawing.SystemColors.Window;
+            this.txtId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtId.BorderRadius = 6;
+            this.txtId.BorderSize = 2;
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtId.ForeColor = System.Drawing.Color.Black;
+            this.txtId.Location = new System.Drawing.Point(19, 183);
+            this.txtId.Multiline = false;
+            this.txtId.Name = "txtId";
+            this.txtId.Padding = new System.Windows.Forms.Padding(10);
+            this.txtId.PasswordChar = false;
+            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtId.PlaceholderText = "";
+            this.txtId.Size = new System.Drawing.Size(208, 46);
+            this.txtId.TabIndex = 3;
+            this.txtId.Texts = "";
+            this.txtId.UnderlinedStyle = false;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
-            this.panel2.Controls.Add(this.rjButton1);
-            this.panel2.Controls.Add(this.rjButton2);
+            this.panel2.Controls.Add(this.btnCancel);
+            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Location = new System.Drawing.Point(0, 429);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(954, 70);
             this.panel2.TabIndex = 0;
             // 
-            // rjButton1
+            // btnCancel
             // 
-            this.rjButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.rjButton1.BackColor = System.Drawing.Color.White;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.White;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 6;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(229, 12);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(184, 46);
-            this.rjButton1.TabIndex = 4;
-            this.rjButton1.Text = "Hủy";
-            this.rjButton1.TextColor = System.Drawing.Color.Black;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.White;
+            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel.BorderRadius = 6;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.Location = new System.Drawing.Point(229, 12);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(184, 46);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.TextColor = System.Drawing.Color.Black;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // rjButton2
+            // btnSave
             // 
-            this.rjButton2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 6;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(19, 12);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(184, 46);
-            this.rjButton2.TabIndex = 3;
-            this.rjButton2.Text = "Thêm";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSave.BorderRadius = 6;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(19, 12);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(184, 46);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // fAddBookComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(954, 499);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fAddBookComponent";
             this.Text = "fAddBookComponent";
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.fAddBookComponent_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBookImage)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Panel panel1;
         private Panel panel2;
-        private RJButton rjButton2;
-        private RJButton rjButton1;
+        private RJButton btnSave;
+        private RJButton btnCancel;
         private Panel panel3;
-        private RJTextBox rjTextBox4;
+        private RJTextBox txtId;
         private Label label6;
-        private RJTextBox rjTextBox6;
+        private RJTextBox txtTotalPages;
         private Label label5;
-        private RJTextBox rjTextBox5;
+        private RJTextBox txtQuantity;
         private Label label4;
-        private RJTextBox rjTextBox3;
+        private RJTextBox txtRentalPrice;
         private Label label3;
-        private RJTextBox rjTextBox2;
-        private RJComboBox rjComboBox1;
+        private RJTextBox txtPrice;
+        private RJComboBox cboBookTypes;
         private Label label2;
-        private RJTextBox rjTextBox1;
+        private RJTextBox txtName;
         private Label label1;
-        private PictureBox pictureBox1;
+        private PictureBox ptbBookImage;
         private Label label11;
-        private RJComboBox rjComboBox5;
+        private RJComboBox cboLanguages;
         private Label label10;
-        private RJComboBox rjComboBox4;
+        private RJComboBox cboPublishingCpn;
         private Label label9;
-        private RJComboBox rjComboBox3;
+        private RJComboBox cboAuthors;
         private Label label8;
-        private RJComboBox rjComboBox2;
+        private RJComboBox cboSectors;
         private Label label7;
     }
 }

@@ -41,32 +41,31 @@ namespace BTLCSharp.View
 
         }
 
-        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //currentRowIndex = dgvData.CurrentRow.Index;
-            //MessageBox.Show(currentRowIndex.ToString());
-        }
-
-        private void dgvData_CellLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            //currentRowIndex = -1;
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
             int currentRowIndex = dgvData.CurrentRow.Index;
             string selectedUserId = dgvData.Rows[currentRowIndex].Cells[0].Value.ToString();
-            int count = ClientDAO.Instance.DeleteClient(selectedUserId);
+            string selectedUserName = dgvData.Rows[currentRowIndex].Cells[1].Value.ToString();
 
-            if(count > 0)
+            DialogResult result = MessageBox.Show(
+                "Bạn có muốn xóa khách hàng: " + selectedUserName + "?",
+                "Thông báo",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information
+            );
+
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Xóa thành công", "Thông báo");
-            } else MessageBox.Show("Xóa thất bại", "Thông báo");
+                int count = ClientDAO.Instance.DeleteClient(selectedUserId);
+                if(count > 0)
+                {
+                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } else MessageBox.Show("Xóa thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
 
             // Reload data
             dgvData.DataSource = ClientDAO.Instance.LoadClientList();
-
         }
 
         private void btnDetail_Click(object sender, EventArgs e)
@@ -84,7 +83,28 @@ namespace BTLCSharp.View
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            string rule;
+            string selectedRule = gboSearch.Texts;
+            if(selectedRule == "Tên khách hàng")
+            {
+                rule = "TenKH";
+            } else if (selectedRule == "Mã khách hàng")
+            {
+                rule = "MaKH";
+            } else if (selectedRule == "Giới Tính")
+            {
+                rule = "GioiTinh";
+            } else
+            {
+                rule = "TenKH";
+            }
 
+            dgvData.DataSource = ClientDAO.Instance.LoadClientList($"where {rule} like N'%{txtSearch.Texts}%'");
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            dgvData.DataSource = ClientDAO.Instance.LoadClientList();
         }
     }
 }

@@ -30,28 +30,28 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.rjTextBox5 = new BTLCSharp.RJTextBox();
+            this.txtSalary = new BTLCSharp.RJTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.rjComboBox1 = new BTLCSharp.RJElements.RJComboBox();
+            this.cboShift = new BTLCSharp.RJElements.RJComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.rjTextBox4 = new BTLCSharp.RJTextBox();
+            this.txtPhoneNumber = new BTLCSharp.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rjTextBox3 = new BTLCSharp.RJTextBox();
+            this.txtLocation = new BTLCSharp.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rjRadioButton2 = new BTLCSharp.RJElements.RJRadioButton();
-            this.rjRadioButton1 = new BTLCSharp.RJElements.RJRadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pnlGender = new System.Windows.Forms.Panel();
+            this.rdoFemale = new BTLCSharp.RJElements.RJRadioButton();
+            this.rdoMale = new BTLCSharp.RJElements.RJRadioButton();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new BTLCSharp.RJTextBox();
+            this.txtName = new BTLCSharp.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new BTLCSharp.RJTextBox();
+            this.txtId = new BTLCSharp.RJTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rjButton1 = new BTLCSharp.RJElements.RJButton();
-            this.rjButton2 = new BTLCSharp.RJElements.RJButton();
+            this.btnCancel = new BTLCSharp.RJElements.RJButton();
+            this.btnSave = new BTLCSharp.RJElements.RJButton();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlGender.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,21 +61,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.rjTextBox5);
+            this.panel1.Controls.Add(this.txtSalary);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.rjComboBox1);
+            this.panel1.Controls.Add(this.cboShift);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.rjTextBox4);
+            this.panel1.Controls.Add(this.txtPhoneNumber);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.rjTextBox3);
+            this.panel1.Controls.Add(this.txtLocation);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.pnlGender);
+            this.panel1.Controls.Add(this.dtpDateOfBirth);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.rjTextBox2);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.rjTextBox1);
+            this.panel1.Controls.Add(this.txtId);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(954, 423);
@@ -93,26 +93,26 @@
             this.label8.TabIndex = 28;
             this.label8.Text = "Lương tháng";
             // 
-            // rjTextBox5
+            // txtSalary
             // 
-            this.rjTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox5.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox5.BorderRadius = 6;
-            this.rjTextBox5.BorderSize = 2;
-            this.rjTextBox5.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox5.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox5.Location = new System.Drawing.Point(520, 266);
-            this.rjTextBox5.Multiline = false;
-            this.rjTextBox5.Name = "rjTextBox5";
-            this.rjTextBox5.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox5.PasswordChar = false;
-            this.rjTextBox5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox5.PlaceholderText = "";
-            this.rjTextBox5.Size = new System.Drawing.Size(300, 46);
-            this.rjTextBox5.TabIndex = 27;
-            this.rjTextBox5.Texts = "";
-            this.rjTextBox5.UnderlinedStyle = false;
+            this.txtSalary.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSalary.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtSalary.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSalary.BorderRadius = 6;
+            this.txtSalary.BorderSize = 2;
+            this.txtSalary.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSalary.ForeColor = System.Drawing.Color.Black;
+            this.txtSalary.Location = new System.Drawing.Point(520, 266);
+            this.txtSalary.Multiline = false;
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Padding = new System.Windows.Forms.Padding(10);
+            this.txtSalary.PasswordChar = false;
+            this.txtSalary.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSalary.PlaceholderText = "";
+            this.txtSalary.Size = new System.Drawing.Size(300, 46);
+            this.txtSalary.TabIndex = 27;
+            this.txtSalary.Texts = "";
+            this.txtSalary.UnderlinedStyle = false;
             // 
             // label7
             // 
@@ -126,24 +126,24 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Mã ca";
             // 
-            // rjComboBox1
+            // cboShift
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.White;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjComboBox1.BorderSize = 2;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.Black;
-            this.rjComboBox1.Location = new System.Drawing.Point(520, 183);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox1.Size = new System.Drawing.Size(300, 45);
-            this.rjComboBox1.TabIndex = 25;
-            this.rjComboBox1.Texts = "";
+            this.cboShift.BackColor = System.Drawing.Color.White;
+            this.cboShift.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.cboShift.BorderSize = 2;
+            this.cboShift.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cboShift.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboShift.ForeColor = System.Drawing.Color.Black;
+            this.cboShift.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cboShift.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cboShift.ListTextColor = System.Drawing.Color.Black;
+            this.cboShift.Location = new System.Drawing.Point(520, 183);
+            this.cboShift.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cboShift.Name = "cboShift";
+            this.cboShift.Padding = new System.Windows.Forms.Padding(2);
+            this.cboShift.Size = new System.Drawing.Size(300, 45);
+            this.cboShift.TabIndex = 25;
+            this.cboShift.Texts = "";
             // 
             // label6
             // 
@@ -157,26 +157,26 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Số điện thoại";
             // 
-            // rjTextBox4
+            // txtPhoneNumber
             // 
-            this.rjTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox4.BorderRadius = 6;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox4.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox4.Location = new System.Drawing.Point(520, 99);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "";
-            this.rjTextBox4.Size = new System.Drawing.Size(300, 46);
-            this.rjTextBox4.TabIndex = 23;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = false;
+            this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPhoneNumber.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPhoneNumber.BorderRadius = 6;
+            this.txtPhoneNumber.BorderSize = 2;
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(520, 99);
+            this.txtPhoneNumber.Multiline = false;
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Padding = new System.Windows.Forms.Padding(10);
+            this.txtPhoneNumber.PasswordChar = false;
+            this.txtPhoneNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPhoneNumber.PlaceholderText = "";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(300, 46);
+            this.txtPhoneNumber.TabIndex = 23;
+            this.txtPhoneNumber.Texts = "";
+            this.txtPhoneNumber.UnderlinedStyle = false;
             // 
             // label4
             // 
@@ -190,26 +190,26 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Địa chỉ";
             // 
-            // rjTextBox3
+            // txtLocation
             // 
-            this.rjTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox3.BorderRadius = 6;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox3.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox3.Location = new System.Drawing.Point(19, 351);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "";
-            this.rjTextBox3.Size = new System.Drawing.Size(423, 46);
-            this.rjTextBox3.TabIndex = 21;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = false;
+            this.txtLocation.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLocation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtLocation.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtLocation.BorderRadius = 6;
+            this.txtLocation.BorderSize = 2;
+            this.txtLocation.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLocation.ForeColor = System.Drawing.Color.Black;
+            this.txtLocation.Location = new System.Drawing.Point(19, 351);
+            this.txtLocation.Multiline = false;
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.Padding = new System.Windows.Forms.Padding(10);
+            this.txtLocation.PasswordChar = false;
+            this.txtLocation.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtLocation.PlaceholderText = "";
+            this.txtLocation.Size = new System.Drawing.Size(423, 46);
+            this.txtLocation.TabIndex = 21;
+            this.txtLocation.Texts = "";
+            this.txtLocation.UnderlinedStyle = false;
             // 
             // label5
             // 
@@ -223,56 +223,56 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Giới tính";
             // 
-            // panel3
+            // pnlGender
             // 
-            this.panel3.Controls.Add(this.rjRadioButton2);
-            this.panel3.Controls.Add(this.rjRadioButton1);
-            this.panel3.Location = new System.Drawing.Point(229, 267);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(213, 46);
-            this.panel3.TabIndex = 19;
+            this.pnlGender.Controls.Add(this.rdoFemale);
+            this.pnlGender.Controls.Add(this.rdoMale);
+            this.pnlGender.Location = new System.Drawing.Point(229, 267);
+            this.pnlGender.Name = "pnlGender";
+            this.pnlGender.Size = new System.Drawing.Size(213, 46);
+            this.pnlGender.TabIndex = 19;
             // 
-            // rjRadioButton2
+            // rdoFemale
             // 
-            this.rjRadioButton2.AutoSize = true;
-            this.rjRadioButton2.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjRadioButton2.Location = new System.Drawing.Point(123, 8);
-            this.rjRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton2.Name = "rjRadioButton2";
-            this.rjRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton2.Size = new System.Drawing.Size(74, 32);
-            this.rjRadioButton2.TabIndex = 16;
-            this.rjRadioButton2.TabStop = true;
-            this.rjRadioButton2.Text = "Nữ";
-            this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton2.UseVisualStyleBackColor = true;
+            this.rdoFemale.AutoSize = true;
+            this.rdoFemale.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rdoFemale.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdoFemale.Location = new System.Drawing.Point(123, 8);
+            this.rdoFemale.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdoFemale.Name = "rdoFemale";
+            this.rdoFemale.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdoFemale.Size = new System.Drawing.Size(74, 32);
+            this.rdoFemale.TabIndex = 16;
+            this.rdoFemale.TabStop = true;
+            this.rdoFemale.Text = "Nữ";
+            this.rdoFemale.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdoFemale.UseVisualStyleBackColor = true;
             // 
-            // rjRadioButton1
+            // rdoMale
             // 
-            this.rjRadioButton1.AutoSize = true;
-            this.rjRadioButton1.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjRadioButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjRadioButton1.Location = new System.Drawing.Point(8, 8);
-            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton1.Name = "rjRadioButton1";
-            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton1.Size = new System.Drawing.Size(89, 32);
-            this.rjRadioButton1.TabIndex = 14;
-            this.rjRadioButton1.TabStop = true;
-            this.rjRadioButton1.Text = "Nam";
-            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton1.UseVisualStyleBackColor = true;
+            this.rdoMale.AutoSize = true;
+            this.rdoMale.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rdoMale.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdoMale.Location = new System.Drawing.Point(8, 8);
+            this.rdoMale.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rdoMale.Name = "rdoMale";
+            this.rdoMale.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdoMale.Size = new System.Drawing.Size(89, 32);
+            this.rdoMale.TabIndex = 14;
+            this.rdoMale.TabStop = true;
+            this.rdoMale.Text = "Nam";
+            this.rdoMale.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdoMale.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpDateOfBirth
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(19, 267);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(0, 46);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(167, 46);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(19, 267);
+            this.dtpDateOfBirth.MinimumSize = new System.Drawing.Size(0, 46);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(167, 46);
+            this.dtpDateOfBirth.TabIndex = 15;
             // 
             // label3
             // 
@@ -298,26 +298,26 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Tên nhân viên";
             // 
-            // rjTextBox2
+            // txtName
             // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 6;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox2.Location = new System.Drawing.Point(19, 183);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(423, 46);
-            this.rjTextBox2.TabIndex = 9;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
+            this.txtName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtName.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtName.BorderRadius = 6;
+            this.txtName.BorderSize = 2;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.Location = new System.Drawing.Point(19, 183);
+            this.txtName.Multiline = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceholderText = "";
+            this.txtName.Size = new System.Drawing.Size(423, 46);
+            this.txtName.TabIndex = 9;
+            this.txtName.Texts = "";
+            this.txtName.UnderlinedStyle = false;
             // 
             // label2
             // 
@@ -331,78 +331,80 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Mã nhân viên";
             // 
-            // rjTextBox1
+            // txtId
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 6;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox1.Location = new System.Drawing.Point(19, 99);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(423, 46);
-            this.rjTextBox1.TabIndex = 7;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txtId.BackColor = System.Drawing.SystemColors.Window;
+            this.txtId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.txtId.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtId.BorderRadius = 6;
+            this.txtId.BorderSize = 2;
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtId.ForeColor = System.Drawing.Color.Black;
+            this.txtId.Location = new System.Drawing.Point(19, 99);
+            this.txtId.Multiline = false;
+            this.txtId.Name = "txtId";
+            this.txtId.Padding = new System.Windows.Forms.Padding(10);
+            this.txtId.PasswordChar = false;
+            this.txtId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtId.PlaceholderText = "";
+            this.txtId.Size = new System.Drawing.Size(423, 46);
+            this.txtId.TabIndex = 7;
+            this.txtId.Texts = "";
+            this.txtId.UnderlinedStyle = false;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(232)))), ((int)(((byte)(254)))));
-            this.panel2.Controls.Add(this.rjButton1);
-            this.panel2.Controls.Add(this.rjButton2);
+            this.panel2.Controls.Add(this.btnCancel);
+            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Location = new System.Drawing.Point(0, 429);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(954, 70);
             this.panel2.TabIndex = 1;
             // 
-            // rjButton1
+            // btnCancel
             // 
-            this.rjButton1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.rjButton1.BackColor = System.Drawing.Color.White;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.White;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 6;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(229, 12);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(184, 46);
-            this.rjButton1.TabIndex = 4;
-            this.rjButton1.Text = "Hủy";
-            this.rjButton1.TextColor = System.Drawing.Color.Black;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.BackgroundColor = System.Drawing.Color.White;
+            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel.BorderRadius = 6;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.Location = new System.Drawing.Point(229, 12);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(184, 46);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.TextColor = System.Drawing.Color.Black;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // rjButton2
+            // btnSave
             // 
-            this.rjButton2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 6;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(19, 12);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(184, 46);
-            this.rjButton2.TabIndex = 3;
-            this.rjButton2.Text = "Thêm";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSave.BorderRadius = 6;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(19, 12);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(184, 46);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Thêm";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // fAddStaffComponent
             // 
@@ -415,10 +417,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fAddStaffComponent";
             this.Text = "fAddStaffComponent";
+            this.Load += new System.EventHandler(this.fAddStaffComponent_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlGender.ResumeLayout(false);
+            this.pnlGender.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -428,25 +431,25 @@
 
         private Panel panel1;
         private Panel panel2;
-        private RJElements.RJButton rjButton1;
-        private RJElements.RJButton rjButton2;
+        private RJElements.RJButton btnCancel;
+        private RJElements.RJButton btnSave;
         private Label label2;
-        private RJTextBox rjTextBox1;
+        private RJTextBox txtId;
         private Label label1;
-        private RJTextBox rjTextBox2;
-        private DateTimePicker dateTimePicker1;
+        private RJTextBox txtName;
+        private DateTimePicker dtpDateOfBirth;
         private Label label3;
         private Label label6;
-        private RJTextBox rjTextBox4;
+        private RJTextBox txtPhoneNumber;
         private Label label4;
-        private RJTextBox rjTextBox3;
+        private RJTextBox txtLocation;
         private Label label5;
-        private Panel panel3;
-        private RJElements.RJRadioButton rjRadioButton2;
-        private RJElements.RJRadioButton rjRadioButton1;
+        private Panel pnlGender;
+        private RJElements.RJRadioButton rdoFemale;
+        private RJElements.RJRadioButton rdoMale;
         private Label label8;
-        private RJTextBox rjTextBox5;
+        private RJTextBox txtSalary;
         private Label label7;
-        private RJElements.RJComboBox rjComboBox1;
+        private RJElements.RJComboBox cboShift;
     }
 }

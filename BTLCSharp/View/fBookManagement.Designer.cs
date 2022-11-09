@@ -31,8 +31,8 @@ namespace BTLCSharp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddBook = new RJButton();
-            this.btnSearchCategory = new RJButton();
+            this.btnAddBook = new BTLCSharp.RJElements.RJButton();
+            this.btnSearchBook = new BTLCSharp.RJElements.RJButton();
             this.pnlSearchBody = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +43,7 @@ namespace BTLCSharp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnAddBook);
-            this.panel1.Controls.Add(this.btnSearchCategory);
+            this.panel1.Controls.Add(this.btnSearchBook);
             this.panel1.Location = new System.Drawing.Point(39, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(954, 70);
@@ -71,27 +71,27 @@ namespace BTLCSharp
             this.btnAddBook.UseVisualStyleBackColor = false;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
-            // btnSearchCategory
+            // btnSearchBook
             // 
-            this.btnSearchCategory.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnSearchCategory.BackColor = System.Drawing.Color.White;
-            this.btnSearchCategory.BackgroundColor = System.Drawing.Color.White;
-            this.btnSearchCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnSearchCategory.BorderRadius = 6;
-            this.btnSearchCategory.BorderSize = 0;
-            this.btnSearchCategory.FlatAppearance.BorderSize = 0;
-            this.btnSearchCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchCategory.ForeColor = System.Drawing.Color.Black;
-            this.btnSearchCategory.Location = new System.Drawing.Point(0, 13);
-            this.btnSearchCategory.Name = "btnSearchCategory";
-            this.btnSearchCategory.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnSearchCategory.Size = new System.Drawing.Size(167, 42);
-            this.btnSearchCategory.TabIndex = 4;
-            this.btnSearchCategory.Text = "Tìm kiếm sách";
-            this.btnSearchCategory.TextColor = System.Drawing.Color.Black;
-            this.btnSearchCategory.UseVisualStyleBackColor = false;
-            this.btnSearchCategory.Click += new System.EventHandler(this.btnSearchCategory_Click);
+            this.btnSearchBook.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSearchBook.BackColor = System.Drawing.Color.White;
+            this.btnSearchBook.BackgroundColor = System.Drawing.Color.White;
+            this.btnSearchBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnSearchBook.BorderRadius = 6;
+            this.btnSearchBook.BorderSize = 0;
+            this.btnSearchBook.FlatAppearance.BorderSize = 0;
+            this.btnSearchBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchBook.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearchBook.ForeColor = System.Drawing.Color.Black;
+            this.btnSearchBook.Location = new System.Drawing.Point(0, 13);
+            this.btnSearchBook.Name = "btnSearchBook";
+            this.btnSearchBook.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.btnSearchBook.Size = new System.Drawing.Size(167, 42);
+            this.btnSearchBook.TabIndex = 4;
+            this.btnSearchBook.Text = "Tìm kiếm sách";
+            this.btnSearchBook.TextColor = System.Drawing.Color.Black;
+            this.btnSearchBook.UseVisualStyleBackColor = false;
+            this.btnSearchBook.Click += new System.EventHandler(this.btnSearchCategory_Click);
             // 
             // pnlSearchBody
             // 
@@ -122,7 +122,7 @@ namespace BTLCSharp
         #endregion
 
         private Panel panel1;
-        private RJButton btnSearchCategory;
+        private RJButton btnSearchBook;
         private RJButton btnAddBook;
         private Panel pnlSearchBody;
     }

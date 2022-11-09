@@ -1,4 +1,5 @@
-﻿using BTLCSharp.Model;
+﻿using BTLCSharp.Controllers;
+using BTLCSharp.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +17,6 @@ namespace BTLCSharp.View
         private UIBuild? uiBuild;
         private Panel? parentPnl;
         Client ?client;
-        public Button ?btnsearchClient;
-
-        public Button? BtnsearchClient { get => btnsearchClient; set => btnsearchClient = value; }
 
         public fAddClientComponent()
         {
@@ -55,12 +53,51 @@ namespace BTLCSharp.View
                 }
                 else rdoFemale.Checked = true;
                 txtLocation.Texts = client.Location;
+
+                // Disable client id input
+                txtId.Enabled = false;
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string gender = "";
+            foreach(RadioButton item in pnlGender.Controls)
+            {
+                if(item.Checked) gender = item.Text;
+            }
+            Client clientData = new Client(txtId.Texts, txtName.Texts, dtpDateOfBirth.Text, gender, txtLocation.Texts);
 
+            if(client != null)
+            {
+                // Update client
+                if (clientData != null)
+                {
+                    int status = ClientDAO.Instance.UpdateClient(clientData);
+
+                    if (status > 0)
+                    {
+                        MessageBox.Show("Cập nhật thành công", "Thông báo");
+                    }
+                    else MessageBox.Show("Cập nhật thất bại", "Thông báo");
+
+                }
+
+            } else
+            {
+                // Create client
+                if(clientData != null)
+                {
+                    int status = ClientDAO.Instance.CreateClient(clientData);
+
+                    if(status > 0)
+                    {
+                        ClearInputs();
+                        MessageBox.Show("Thêm thành công", "Thông báo");
+                    } else MessageBox.Show("Thêm thất bại", "Thông báo");
+                    
+                }
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -69,6 +106,17 @@ namespace BTLCSharp.View
             {
                 uiBuild.OpenChildForm(new fClientSearchComponent(uiBuild, parentPnl), parentPnl);
             }
+        }
+
+        private void ClearInputs()
+        {
+            txtId.Texts = "";
+            txtName.Texts = "";
+            foreach (RadioButton item in pnlGender.Controls)
+            {
+                if (item.Checked) item.Checked = false;
+            }
+            txtLocation.Texts = "";
         }
     }
 }

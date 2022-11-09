@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="RJElements\RJRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="View\fAddBookComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fAddClientComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fAddStaffComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fBookManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fBookSearchComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fClientManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fRentalManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RJElements\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="RJElements\RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="RJElements\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="View\fClientSearchComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fStaffManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fStaffSearchComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

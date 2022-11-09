@@ -17,7 +17,6 @@ namespace BTLCSharp.View
     {
         private UIBuild uiBuild = new UIBuild();
         private RJButton ?currentBtn;
-        private Panel ?parrentPnl;
 
         public fClientManagement()
         {
@@ -55,10 +54,7 @@ namespace BTLCSharp.View
         private void btnAddClient_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
-            Form addClientForm = new fAddClientComponent(uiBuild, pnlSearchBody);
-            
-            uiBuild.OpenChildForm(addClientForm, pnlSearchBody);
-            
+            uiBuild.OpenChildForm(new fAddClientComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
     }
 }

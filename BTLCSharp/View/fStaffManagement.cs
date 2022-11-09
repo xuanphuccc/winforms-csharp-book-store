@@ -13,8 +13,8 @@ namespace BTLCSharp.View
 {
     public partial class fStaffManagement : Form
     {
-        private UIBuild uIBuild = new UIBuild();
-        private RJButton currentBtn;
+        private UIBuild uiBuild = new UIBuild();
+        private RJButton ?currentBtn;
 
         public fStaffManagement()
         {
@@ -22,6 +22,7 @@ namespace BTLCSharp.View
 
             // Default active search staff
             ActiveButton(btnSearchStaff);
+            uiBuild.OpenChildForm(new fStaffSearchComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
 
         private void ActiveButton(object senderBtn)
@@ -46,13 +47,14 @@ namespace BTLCSharp.View
         private void btnSearchStaff_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+            uiBuild.OpenChildForm(new fStaffSearchComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
 
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
 
-            uIBuild.OpenChildForm(new fAddStaffComponent(), pnlSearchBody);
+            uiBuild.OpenChildForm(new fAddStaffComponent(), pnlSearchBody);
         }
     }
 }
