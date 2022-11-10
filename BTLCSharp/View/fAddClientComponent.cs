@@ -102,10 +102,13 @@ namespace BTLCSharp.View
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if(uiBuild != null && parentPnl != null)
-            {
-                uiBuild.OpenChildForm(new fClientSearchComponent(uiBuild, parentPnl), parentPnl);
-            }
+            //if(uiBuild != null && parentPnl != null)
+            //{
+            //    uiBuild.OpenChildForm(new fClientSearchComponent(uiBuild, parentPnl), parentPnl);
+            //}
+
+            fClientManagement fClientManagement = new fClientManagement();
+            fClientManagement.OpenSearchClientForm();
         }
 
         private void ClearInputs()

@@ -80,21 +80,21 @@ namespace BTLCSharp.View
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.BackgroundColor = System.Drawing.Color.White;
             this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnDelete.BorderRadius = 6;
             this.btnDelete.BorderSize = 0;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(8)))), ((int)(((byte)(20)))));
             this.btnDelete.Location = new System.Drawing.Point(229, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(184, 46);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(8)))), ((int)(((byte)(20)))));
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -123,7 +123,7 @@ namespace BTLCSharp.View
             this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAll.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAll.ForeColor = System.Drawing.Color.White;
-            this.btnAll.Location = new System.Drawing.Point(785, 14);
+            this.btnAll.Location = new System.Drawing.Point(766, 14);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(143, 46);
             this.btnAll.TabIndex = 7;
@@ -144,7 +144,7 @@ namespace BTLCSharp.View
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(580, 14);
+            this.btnSearch.Location = new System.Drawing.Point(561, 14);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(184, 46);
             this.btnSearch.TabIndex = 6;
@@ -163,7 +163,7 @@ namespace BTLCSharp.View
             this.txtSearch.BorderSize = 2;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtSearch.Location = new System.Drawing.Point(242, 14);
+            this.txtSearch.Location = new System.Drawing.Point(223, 14);
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Padding = new System.Windows.Forms.Padding(10);
@@ -178,7 +178,7 @@ namespace BTLCSharp.View
             // gboSearch
             // 
             this.gboSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.gboSearch.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gboSearch.BackColor = System.Drawing.Color.White;
             this.gboSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
             this.gboSearch.BorderSize = 2;
             this.gboSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
@@ -191,7 +191,7 @@ namespace BTLCSharp.View
             "Giới Tính"});
             this.gboSearch.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.gboSearch.ListTextColor = System.Drawing.Color.Black;
-            this.gboSearch.Location = new System.Drawing.Point(19, 14);
+            this.gboSearch.Location = new System.Drawing.Point(0, 14);
             this.gboSearch.MinimumSize = new System.Drawing.Size(200, 30);
             this.gboSearch.Name = "gboSearch";
             this.gboSearch.Padding = new System.Windows.Forms.Padding(2);

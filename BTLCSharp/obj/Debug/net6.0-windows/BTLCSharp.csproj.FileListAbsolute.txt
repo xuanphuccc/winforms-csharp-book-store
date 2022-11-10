@@ -37,3 +37,7 @@ D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\bin\Debug\net6.0-windows\runtimes
 D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fClientSearchComponent.resources
 D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fBookSearchComponent.resources
 D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fStaffSearchComponent.resources
+D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fAddRentalBill.resources
+D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fSearchRentalBill.resources
+D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fAddReturnBill.resources
+D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fSearchReturnBill.resources

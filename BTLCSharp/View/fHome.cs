@@ -6,12 +6,12 @@ namespace BTLCSharp
 {
     public partial class fHome : Form
     {
-        new UIBuild uiBuild = new UIBuild(); 
+        UIBuild uiBuild = new UIBuild(); 
         private IconButton currentBtn;
         private Panel borderLeftBtn;
         private Panel bottomBorder;
         private Panel leftBodyBorder;
-        private Form currentChildForm;
+
         public fHome()
         {
             InitializeComponent();

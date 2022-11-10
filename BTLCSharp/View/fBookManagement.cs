@@ -56,5 +56,10 @@ namespace BTLCSharp
             ActiveButton(sender);
             uiBuild.OpenChildForm(new fAddBookComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
+
+        public void Test(string abc)
+        {
+
+        }
     }
 }

@@ -56,5 +56,11 @@ namespace BTLCSharp.View
             ActiveButton(sender);
             uiBuild.OpenChildForm(new fAddClientComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
+
+        public void OpenSearchClientForm()
+        {
+            ActiveButton(btnSearchClient);
+            uiBuild.OpenChildForm(new fClientSearchComponent(uiBuild, pnlSearchBody), pnlSearchBody);
+        }
     }
 }
