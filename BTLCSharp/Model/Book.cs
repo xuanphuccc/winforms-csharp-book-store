@@ -38,7 +38,7 @@ namespace BTLCSharp.Model
         public string? PublishingCpnId { get => publishingCpnId; set => publishingCpnId = value; }
         public string? LanguageId { get => languageId; set => languageId = value; }
 
-        public Book(string? id, string? name, int? totalPages, int? price, int? rentalPrice, int? quantity, string? photoURL, string? note, string? bookTypeId, string? sectorId, string? authorId, string? publishingCpnId, string? languageId)
+        public Book(string id, string name, int totalPages, int price, int rentalPrice, int quantity, string photoURL, string note, string bookTypeId, string sectorId, string authorId, string publishingCpnId, string languageId)
         {
             Id = id;
             Name = name;

@@ -94,12 +94,17 @@ namespace BTLCSharp
             // 
             // ptbBookImage
             // 
+            this.ptbBookImage.BackgroundImage = global::BTLCSharp.Properties.Resources.pictureIcon;
+            this.ptbBookImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ptbBookImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbBookImage.Location = new System.Drawing.Point(711, 105);
+            this.ptbBookImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbBookImage.Location = new System.Drawing.Point(711, 99);
             this.ptbBookImage.Name = "ptbBookImage";
-            this.ptbBookImage.Size = new System.Drawing.Size(208, 208);
+            this.ptbBookImage.Size = new System.Drawing.Size(208, 214);
+            this.ptbBookImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbBookImage.TabIndex = 25;
             this.ptbBookImage.TabStop = false;
+            this.ptbBookImage.Click += new System.EventHandler(this.ptbBookImage_Click);
             // 
             // label11
             // 

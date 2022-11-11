@@ -74,6 +74,7 @@
             this.btnAll.Text = "Tất cả";
             this.btnAll.TextColor = System.Drawing.Color.White;
             this.btnAll.UseVisualStyleBackColor = false;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // btnSearch
             // 
@@ -94,6 +95,7 @@
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextColor = System.Drawing.Color.White;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -186,6 +188,7 @@
             this.btnDetail.Text = "Chi tiết";
             this.btnDetail.TextColor = System.Drawing.Color.White;
             this.btnDetail.UseVisualStyleBackColor = false;
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // btnDelete
             // 
@@ -206,6 +209,7 @@
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(8)))), ((int)(((byte)(20)))));
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // fSearchRentalBill
             // 
@@ -219,6 +223,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fSearchRentalBill";
             this.Text = "fSearchRentalBill";
+            this.Load += new System.EventHandler(this.fSearchRentalBill_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.panel3.ResumeLayout(false);

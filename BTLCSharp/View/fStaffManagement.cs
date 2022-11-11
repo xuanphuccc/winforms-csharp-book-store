@@ -54,7 +54,7 @@ namespace BTLCSharp.View
         {
             ActiveButton(sender);
 
-            uiBuild.OpenChildForm(new fAddStaffComponent(), pnlSearchBody);
+            uiBuild.OpenChildForm(new fAddStaffComponent(uiBuild, pnlSearchBody), pnlSearchBody);
         }
     }
 }

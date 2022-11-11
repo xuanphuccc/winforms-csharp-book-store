@@ -66,7 +66,18 @@ namespace BTLCSharp.View
             {
                 if(item.Checked) gender = item.Text;
             }
-            Client clientData = new Client(txtId.Texts, txtName.Texts, dtpDateOfBirth.Text, gender, txtLocation.Texts);
+
+            Client clientData = null;
+            if(checkInputs())
+            {
+                clientData = new Client(
+                    txtId.Texts,
+                    txtName.Texts,
+                    dtpDateOfBirth.Text,
+                    gender,
+                    txtLocation.Texts
+                );
+            }
 
             if(client != null)
             {
@@ -77,10 +88,9 @@ namespace BTLCSharp.View
 
                     if (status > 0)
                     {
-                        MessageBox.Show("Cập nhật thành công", "Thông báo");
+                        MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else MessageBox.Show("Cập nhật thất bại", "Thông báo");
-
+                    else MessageBox.Show("Cập nhật thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             } else
@@ -93,8 +103,8 @@ namespace BTLCSharp.View
                     if(status > 0)
                     {
                         ClearInputs();
-                        MessageBox.Show("Thêm thành công", "Thông báo");
-                    } else MessageBox.Show("Thêm thất bại", "Thông báo");
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    } else MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                 }
             }
@@ -102,13 +112,25 @@ namespace BTLCSharp.View
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            //if(uiBuild != null && parentPnl != null)
-            //{
-            //    uiBuild.OpenChildForm(new fClientSearchComponent(uiBuild, parentPnl), parentPnl);
-            //}
+            if (uiBuild != null && parentPnl != null)
+            {
+                uiBuild.OpenChildForm(new fClientSearchComponent(uiBuild, parentPnl), parentPnl);
+            }
+        }
 
-            fClientManagement fClientManagement = new fClientManagement();
-            fClientManagement.OpenSearchClientForm();
+        private bool checkInputs()
+        {
+            if(
+                InputCheck.Instance.EmptyCheck(txtId.Texts, "mã khách hàng") &&
+                InputCheck.Instance.EmptyCheck(txtName.Texts, "tên khách hàng") &&
+                InputCheck.Instance.PanelRadioCheck(pnlGender, "giới tính") != "" &&
+                InputCheck.Instance.EmptyCheck(txtLocation.Texts, "địa chỉ")
+            )
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void ClearInputs()

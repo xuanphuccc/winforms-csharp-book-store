@@ -74,16 +74,21 @@ namespace BTLCSharp.View
             {
                 if (item.Checked) gender = item.Text;
             }
-            Staff staffData = new Staff(
-                txtId.Texts,
-                txtName.Texts,
-                cboShift.Texts,
-                dtpDateOfBirth.Text,
-                gender,
-                txtLocation.Texts,
-                txtPhoneNumber.Texts,
-                txtSalary.Texts
-            );
+
+            Staff staffData = null;
+            if(checkInputs())
+            {
+                staffData = new Staff(
+                    txtId.Texts,
+                    txtName.Texts,
+                    cboShift.Texts,
+                    dtpDateOfBirth.Text,
+                    gender,
+                    txtLocation.Texts,
+                    txtPhoneNumber.Texts,
+                    txtSalary.Texts
+                );
+            }
 
             if (staff != null)
             {
@@ -94,9 +99,9 @@ namespace BTLCSharp.View
 
                     if (status > 0)
                     {
-                        MessageBox.Show("Cập nhật thành công", "Thông báo");
+                        MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else MessageBox.Show("Cập nhật thất bại", "Thông báo");
+                    else MessageBox.Show("Cập nhật thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
 
@@ -111,9 +116,9 @@ namespace BTLCSharp.View
                     if (status > 0)
                     {
                         ClearInputs();
-                        MessageBox.Show("Thêm thành công", "Thông báo");
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else MessageBox.Show("Thêm thất bại", "Thông báo");
+                    else MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
@@ -125,6 +130,23 @@ namespace BTLCSharp.View
             {
                 uiBuild.OpenChildForm(new fStaffSearchComponent(uiBuild, parentPnl), parentPnl);
             }
+        }
+
+        private bool checkInputs()
+        {
+            if(
+                InputCheck.Instance.EmptyCheck(txtId.Texts, "mã nhân viên") &&
+                InputCheck.Instance.EmptyCheck(txtName.Texts, "tên nhân viên") &&
+                InputCheck.Instance.PanelRadioCheck(pnlGender, "giới tính") != "" &&
+                InputCheck.Instance.EmptyCheck(txtLocation.Texts, "địa chỉ") &&
+                InputCheck.Instance.EmptyCheck(txtPhoneNumber.Texts, "số điện thoại") &&
+                InputCheck.Instance.EmptyCheck(txtSalary.Texts, "lương tháng")
+            )
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void ClearInputs()
