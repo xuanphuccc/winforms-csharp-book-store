@@ -96,6 +96,7 @@ begin
 	where MaTra=@matra
 end
 
+-- test
 select * from ChiTietTraSach
 
 insert TraSach values ('TR05', 'TH07', 'NV01', '2022-11-20', 0)
@@ -103,6 +104,7 @@ insert TraSach values ('TR05', 'TH07', 'NV01', '2022-11-20', 0)
 insert ChiTietTraSach
 values
 ('TR05', 'S05', 'VP00', null)
+
 
 --## 5. Tìm kiếm Sách truyện theo tiêu chí: Tên sách, lĩnh vực, tác giả, NXB.
 -- (Đã xong)

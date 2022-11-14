@@ -74,7 +74,8 @@ namespace BTLCSharp
                 txtPrice.Texts = book.Price.ToString();
                 txtRentalPrice.Texts = book.RentalPrice.ToString();
                 txtQuantity.Texts = book.Quantity.ToString();
-                ptbBookImage.ImageLocation = book.PhotoURL;
+                ptbBookImage.ImageLocation = Application.StartupPath + book.PhotoURL;
+                photoURL = book.PhotoURL;
                 cboBookTypes.Texts = book.BookTypeId;
                 cboLanguages.Texts = book.LanguageId;
 
@@ -112,14 +113,13 @@ namespace BTLCSharp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string sectorId = ((Sector)cboSectors.SelectedItem).Id;
-            string authorId = ((Author)cboAuthors.SelectedItem).Id;
-            string publishingCpnId = ((PublishingCompany)cboPublishingCpn.SelectedItem).Id;
+            string? sectorId = ((Sector)cboSectors.SelectedItem).Id;
+            string? authorId = ((Author)cboAuthors.SelectedItem).Id;
+            string? publishingCpnId = ((PublishingCompany)cboPublishingCpn.SelectedItem).Id;
 
-            Book newBook = null;
-            if(checkInputs())
+            if(checkInputs() && sectorId != null && authorId != null && publishingCpnId != null)
             {
-                newBook = new Book(
+                Book newBook = new Book(
                     txtId.Texts,
                     txtName.Texts,
                     Convert.ToInt32(txtTotalPages.Texts),
@@ -134,11 +134,8 @@ namespace BTLCSharp
                     publishingCpnId,
                     cboLanguages.Texts
                 );
-            }
 
-            if (book != null)
-            {
-                if(newBook != null)
+                if (book != null)
                 {
                     // Update
                     int result = BookDAO.Instance.UpdateBook(newBook);
@@ -147,10 +144,7 @@ namespace BTLCSharp
                         MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-            }
-            else
-            {
-                if(newBook != null)
+                else
                 {
                     // Create
                     int result = BookDAO.Instance.CreateBook(newBook);
@@ -176,7 +170,7 @@ namespace BTLCSharp
                 {
                     string newPath = fileName.Substring(index);
                     photoURL = newPath;
-                    ptbBookImage.ImageLocation = Application.StartupPath + newPath;
+                    ptbBookImage.ImageLocation =  Application.StartupPath + newPath;
 
                 }
 

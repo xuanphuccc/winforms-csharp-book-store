@@ -217,7 +217,6 @@ values
 ('KH05', N'Đỗ Văn Bắc', '2001-01-21', N'Nam', N'Yên Bái')
 go
 
-
 insert ThueSach
 values
 ('TH01', 'KH01', 'NV02', '2022-06-12', 100000),
@@ -227,21 +226,20 @@ values
 ('TH05', 'KH05', 'NV03', '2022-10-31', 100000)
 go
 
-
 insert TinhTrang
 values
-('TT01', N'Còn nguyên vẹn'),
+('TT01', N'Hình thức mới'),
 ('TT02', N'Đã bị cũ, rách')
 go
 
 insert ChiTietThueSach
 values
-('TH01', 'S01', 'TT01', 0),
-('TH01', 'S02', 'TT01', 0),
-('TH02', 'S02', 'TT01', 0),
-('TH03', 'S05', 'TT01', 0),
-('TH04', 'S04', 'TT01', 0),
-('TH05', 'S03', 'TT01', 0)
+('TH01', 'S01', 'TT01', 1),
+('TH01', 'S02', 'TT01', 1),
+('TH02', 'S02', 'TT01', 1),
+('TH03', 'S05', 'TT01', 1),
+('TH04', 'S04', 'TT01', 1),
+('TH05', 'S03', 'TT01', 1)
 go
 
 insert TraSach
@@ -255,7 +253,7 @@ go
 
 insert ViPham
 values
-('VP00', N'Sách không có vấn đề gì', 0),
+('VP00', N'Sách còn nguyên vẹn', 0),
 ('VP01', N'Sách bị rách', 100000),
 ('VP02', N'Trả muộn', 15000)
 go
@@ -263,12 +261,11 @@ go
 -- Nếu thành tiền là null thì lỗi
 insert ChiTietTraSach
 values
-('TR01', 'S01', 'VP00', 41000),
-('TR01', 'S02', 'VP01', 21000),
-('TR02', 'S02', 'VP00', 31000),
-('TR03', 'S05', 'VP01', 16000),
-('TR04', 'S04', 'VP01', 31000),
-('TR05', 'S03', 'VP02', 21000)
+('TR01', 'S01', 'VP00', 30000),
+('TR01', 'S02', 'VP01', 30000),
+('TR02', 'S02', 'VP00', 30000),
+('TR03', 'S05', 'VP01', 15000),
+('TR04', 'S04', 'VP01', 30000),
+('TR05', 'S03', 'VP02', 20000)
 go
-
 

@@ -138,7 +138,6 @@ namespace BTLCSharp.View
                             MessageBox.Show("Thêm sách vào phiếu trả thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LoadData(returnBill.Id);
                             LoadCboBookNameData();
-                            clearInputs();
                         }
                         else
                         {
@@ -159,6 +158,7 @@ namespace BTLCSharp.View
             {
                 isClickCreateBtn = true;
                 MessageBox.Show("Tạo phiếu trả thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearInputs();
             }
         }
 
