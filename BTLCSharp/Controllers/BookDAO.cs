@@ -41,6 +41,22 @@ namespace BTLCSharp.Controllers
             return booksList;
         }
 
+        // Lấy sách chưa trả từ mã phiếu thuê
+        public List<Book> LoadUnpaidBookList(string rentalBillId)
+        {
+            List<Book> booksList = new List<Book>();
+            DataTable data = DataProvider.Instance.ReadTable($"select * from UnpaidBook(N'{rentalBillId}')");
+            
+
+            foreach (DataRow row in data.Rows)
+            {
+                Book book = new Book(row);
+                booksList.Add(book);
+            }
+
+            return booksList;
+        }
+
         public int DeleteBook(string? bookId)
         {
             if (bookId != null)

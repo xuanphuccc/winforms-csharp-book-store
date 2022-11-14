@@ -260,12 +260,15 @@ values
 ('VP02', N'Trả muộn', 15000)
 go
 
+-- Nếu thành tiền là null thì lỗi
 insert ChiTietTraSach
 values
-('TR01', 'S01', 'VP00', null),
-('TR01', 'S02', 'VP01', null),
-('TR02', 'S02', 'VP00', null),
-('TR03', 'S05', 'VP01', null),
-('TR04', 'S04', 'VP01', null),
-('TR05', 'S03', 'VP02', null)
+('TR01', 'S01', 'VP00', 41000),
+('TR01', 'S02', 'VP01', 21000),
+('TR02', 'S02', 'VP00', 31000),
+('TR03', 'S05', 'VP01', 16000),
+('TR04', 'S04', 'VP01', 31000),
+('TR05', 'S03', 'VP02', 21000)
 go
+
+

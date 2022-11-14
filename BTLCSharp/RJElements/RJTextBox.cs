@@ -336,6 +336,7 @@ namespace BTLCSharp
         {
             if (_TextChanged != null)
                 _TextChanged.Invoke(sender, e);
+            
         }
         private void textBox1_Click(object sender, EventArgs e)
         {

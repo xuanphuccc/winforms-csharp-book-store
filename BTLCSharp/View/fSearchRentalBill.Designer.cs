@@ -32,7 +32,7 @@
             this.btnAll = new BTLCSharp.RJElements.RJButton();
             this.btnSearch = new BTLCSharp.RJElements.RJButton();
             this.txtSearch = new BTLCSharp.RJTextBox();
-            this.gboSearch = new BTLCSharp.RJElements.RJComboBox();
+            this.cboSearch = new BTLCSharp.RJElements.RJComboBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDetail = new BTLCSharp.RJElements.RJButton();
@@ -49,7 +49,7 @@
             this.panel2.Controls.Add(this.btnAll);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Controls.Add(this.gboSearch);
+            this.panel2.Controls.Add(this.cboSearch);
             this.panel2.Location = new System.Drawing.Point(0, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(954, 73);
@@ -119,29 +119,29 @@
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
             // 
-            // gboSearch
+            // cboSearch
             // 
-            this.gboSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.gboSearch.BackColor = System.Drawing.Color.White;
-            this.gboSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.gboSearch.BorderSize = 2;
-            this.gboSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.gboSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gboSearch.ForeColor = System.Drawing.Color.Black;
-            this.gboSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
-            this.gboSearch.Items.AddRange(new object[] {
+            this.cboSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cboSearch.BackColor = System.Drawing.Color.White;
+            this.cboSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.cboSearch.BorderSize = 2;
+            this.cboSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cboSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cboSearch.ForeColor = System.Drawing.Color.Black;
+            this.cboSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.cboSearch.Items.AddRange(new object[] {
             "Tên khách hàng",
             "Mã khách hàng",
-            "Giới Tính"});
-            this.gboSearch.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.gboSearch.ListTextColor = System.Drawing.Color.Black;
-            this.gboSearch.Location = new System.Drawing.Point(0, 14);
-            this.gboSearch.MinimumSize = new System.Drawing.Size(200, 30);
-            this.gboSearch.Name = "gboSearch";
-            this.gboSearch.Padding = new System.Windows.Forms.Padding(2);
-            this.gboSearch.Size = new System.Drawing.Size(200, 46);
-            this.gboSearch.TabIndex = 3;
-            this.gboSearch.Texts = "Tìm kiếm theo";
+            "Mã phiếu thuê"});
+            this.cboSearch.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cboSearch.ListTextColor = System.Drawing.Color.Black;
+            this.cboSearch.Location = new System.Drawing.Point(0, 14);
+            this.cboSearch.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cboSearch.Name = "cboSearch";
+            this.cboSearch.Padding = new System.Windows.Forms.Padding(2);
+            this.cboSearch.Size = new System.Drawing.Size(200, 46);
+            this.cboSearch.TabIndex = 3;
+            this.cboSearch.Texts = "Tìm kiếm theo";
             // 
             // dgvData
             // 
@@ -237,7 +237,7 @@
         private RJElements.RJButton btnAll;
         private RJElements.RJButton btnSearch;
         private RJTextBox txtSearch;
-        private RJElements.RJComboBox gboSearch;
+        private RJElements.RJComboBox cboSearch;
         private DataGridView dgvData;
         private Panel panel3;
         private RJElements.RJButton btnDetail;

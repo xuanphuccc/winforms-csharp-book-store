@@ -26,11 +26,11 @@ namespace BTLCSharp.Controllers
 
             if (condition != null)
             {
-                data = DataProvider.Instance.ReadTable("select * from ThueSach " + condition);
+                data = DataProvider.Instance.ReadTable("select * from LoadBookRental() " + condition);
             }
             else
             {
-                data = DataProvider.Instance.ReadTable("select * from ThueSach");
+                data = DataProvider.Instance.ReadTable("select * from LoadBookRental()");
             }
 
             foreach (DataRow row in data.Rows)
@@ -46,7 +46,7 @@ namespace BTLCSharp.Controllers
         {
             if (rentalBillId != null)
             {
-                return DataProvider.Instance.ExecuteNonQuery($"delete ThueSach where MaKH = N'{rentalBillId}'");
+                return DataProvider.Instance.ExecuteNonQuery($"delete ThueSach where MaThue = N'{rentalBillId}'");
             }
 
             return 0;
@@ -58,7 +58,7 @@ namespace BTLCSharp.Controllers
             {
                 return DataProvider.Instance.ExecuteNonQuery(
                     "insert ThueSach " +
-                    $"values (N'{rentalBill.Id}', N'{rentalBill.ClientId}', N'{rentalBill.StaffId}', '{rentalBill.Date}', 100000)"
+                    $"values (N'{rentalBill.Id}', N'{rentalBill.ClientId}', N'{rentalBill.StaffId}', '{rentalBill.Date}', {rentalBill.Deposit})"
                     );
             }
 

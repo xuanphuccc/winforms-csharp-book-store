@@ -15,8 +15,8 @@ namespace BTLCSharp.View
     public partial class fRentalManagement : Form
     {
         private UIBuild uiBuild = new UIBuild();
-        private RJButton currentBtn;
-        private IconButton currentSubBtn;
+        private RJButton? currentBtn;
+        private IconButton? currentSubBtn;
 
         public fRentalManagement()
         {
@@ -25,7 +25,7 @@ namespace BTLCSharp.View
             // Default active rental section
             ActiveButton(btnRental);
             ActiveSubButton(btnAdd);
-            uiBuild.OpenChildForm(new fAddRentalBill(), pnlBody);
+            uiBuild.OpenChildForm(new fAddRentalBill(uiBuild, pnlBody), pnlBody);
         }
         
 
@@ -71,26 +71,26 @@ namespace BTLCSharp.View
         {
             ActiveButton(sender);
             ActiveSubButton(btnAdd);
-            uiBuild.OpenChildForm(new fAddRentalBill(), pnlBody);
+            uiBuild.OpenChildForm(new fAddRentalBill(uiBuild, pnlBody), pnlBody);
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
             ActiveSubButton(btnAdd);
-            uiBuild.OpenChildForm(new fAddReturnBill(), pnlBody);
+            uiBuild.OpenChildForm(new fAddReturnBill(uiBuild, pnlBody), pnlBody);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ActiveSubButton(sender);
 
-            if (currentBtn.Text == "Phiếu thuê")
+            if (currentBtn != null && currentBtn.Text == "Phiếu thuê")
             {
-                uiBuild.OpenChildForm(new fSearchRentalBill(), pnlBody);
-            } else if(currentBtn.Text == "Phiếu trả")
+                uiBuild.OpenChildForm(new fSearchRentalBill(uiBuild, pnlBody), pnlBody);
+            } else if(currentBtn != null && currentBtn.Text == "Phiếu trả")
             {
-                uiBuild.OpenChildForm(new fSearchReturnBill(), pnlBody);
+                uiBuild.OpenChildForm(new fSearchReturnBill(uiBuild, pnlBody), pnlBody);
             }
         }
 
@@ -98,12 +98,12 @@ namespace BTLCSharp.View
         {
             ActiveSubButton(sender);
 
-            if(currentBtn.Text == "Phiếu thuê")
+            if(currentBtn != null && currentBtn.Text == "Phiếu thuê")
             {
-                uiBuild.OpenChildForm(new fAddRentalBill(), pnlBody);
-            } else if(currentBtn.Text == "Phiếu trả")
+                uiBuild.OpenChildForm(new fAddRentalBill(uiBuild, pnlBody), pnlBody);
+            } else if(currentBtn != null && currentBtn.Text == "Phiếu trả")
             {
-                uiBuild.OpenChildForm(new fAddReturnBill(), pnlBody);
+                uiBuild.OpenChildForm(new fAddReturnBill(uiBuild, pnlBody), pnlBody);
             }
 
         }
