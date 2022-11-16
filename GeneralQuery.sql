@@ -19,16 +19,37 @@ end
 
 go
 -- Xóa chi tiết phiếu thuê (Đã test)
-create trigger HuyThueSach on chitietthuesach for delete as
-begin
-declare @masach nvarchar(10)
-select @masach= MaSach from deleted
-update Sach
-set SoLuong=SoLuong + 1
-where MaSach=@masach
-end
+--create trigger HuyThueSach on chitietthuesach for delete as
+--begin
+--declare @masach nvarchar(10)
+--select @masach= MaSach from deleted
+--update Sach
+--set SoLuong=SoLuong + 1
+--where MaSach=@masach
+--end
 
-go
+-- Mới
+create trigger HuyThueSachThuVien on ChiTietThueSach for delete as
+begin
+	declare @masach nvarchar(10)
+
+	declare MaThueCursor cursor for select MaSach from deleted
+	open MaThueCursor
+		fetch next from MaThueCursor into @masach
+		while @@FETCH_STATUS=0
+			begin
+				update Sach
+				set SoLuong=SoLuong+1
+				where MaSach=@masach
+
+				fetch next from MaThueCursor into @masach
+			end
+	close MaThueCursor
+	deallocate MaThueCursor
+end
+--Mới
+
+
 -- Thêm, sửa phiếu trả
 create trigger TraSachThuVien on ChiTietTraSach for insert, update as
 begin
@@ -41,16 +62,45 @@ end
 
 go
 -- Xóa phiếu trả
-create trigger HuyTraSach on ChiTietTraSach for delete as
-begin
-declare @masach nvarchar(10)
-select @masach= MaSach from deleted
-update Sach
-set SoLuong=SoLuong - 1
-where MaSach=@masach
-end
+--create trigger HuyTraSach on ChiTietTraSach for delete as
+--begin
+--declare @masach nvarchar(10)
+--select @masach= MaSach from deleted
+--update Sach
+--set SoLuong=SoLuong - 1
+--where MaSach=@masach
+--end
 
-go
+
+--Mới
+create trigger HuyTraSachThuVien on ChiTietTraSach for delete as
+begin
+	declare @masach nvarchar(10),@mathue nvarchar(10)
+	select @masach= MaSach from deleted
+	select	@mathue= MaThue from deleted,TraSach
+	where TraSach.MaTra=deleted.MaTra
+	and @masach=MaSach
+
+	declare MaTraCursor cursor for select MaSach from deleted
+	open MaTraCursor
+		fetch next from MaTraCursor into @masach
+		while @@FETCH_STATUS=0
+			begin
+				print @mathue
+				print @masach
+				update ChiTietThueSach
+				set DaTra=0
+				where MaSach=@masach and MaThue=@mathue
+				update Sach
+				set SoLuong=SoLuong-1
+				where MaSach=@masach
+
+				fetch next from MaTraCursor into @masach
+			end
+	close MaTraCursor
+	deallocate MaTraCursor
+end
+-- Mới
 
 --## 3. Khi khách hàng trả sách chỉ hiển thị các sách chưa trả từ mã thuê sách tương ứng.
 create function UnpaidBook(@mathue nvarchar(10))
@@ -111,59 +161,41 @@ values
 --## 6. Tìm kiếm Nhân viên theo tiêu chí: Tên nhân viên, ca làm, giới tính.
 -- (Đã xong)
 
---## 7. Báo cáo danh sách các sách truyện đang được thuê chưa trả.	
-select TenSach, COUNT(TenSach) as N'Số lượng', N'Chưa Trả' as DaTra from ChiTietThueSach, Sach
-where Sach.MaSach = ChiTietThueSach.MaSach and DaTra=0
-group by TenSach
+--## 7. Báo cáo danh sách các sách truyện đang được thuê chưa trả.
+alter function ReportSachThueChuaTra()
+returns table
+	return select TenSach, COUNT(TenSach) as SoLuong
+			from ChiTietThueSach, Sach
+			where Sach.MaSach = ChiTietThueSach.MaSach and DaTra=0
+			group by TenSach
+
+select * from ReportSachThueChuaTra()
 
 --## 8. Báo cáo tổng tiền cho thuê thu được của cửa hàng theo tháng, quý, năm.
 -- (Đang chỉnh sửa)
 --báo cáo doanh thu tháng
-create function TongTienThueThang (@Thang int, @nam int)
-returns int 
-as
-begin
-	declare @tongtien int
-	select @tongtien = sum(TongTien)  from TraSach
-					where month(NgayTra)=@Thang and YEAR(NgayTra)=@nam
-					group by month(NgayTra), YEAR(NgayTra)
-	return @tongtien
-	
-end
-select  dbo.TongTienThueThang(7,2022)
-
-
-create function ChiTietTongTienThueThang(@Thang int, @nam int)
+alter function ChiTietTongTienThueThang(@Thang int, @nam int)
 returns table
-	return select TraSach.MaTra, MaThue, MaVP,MaNV,NgayTra,ThanhTien from ChiTietTraSach,TraSach
-		where month(NgayTra)=@Thang and YEAR(NgayTra)=@nam and TraSach.MaTra=ChiTietTraSach.MaTra
+	return select day(NgayTra)as Ngay,sum(ThanhTien)as Tong,count(NgayTra) as SoDonHang
+			from ChiTietTraSach,TraSach
+			where month(NgayTra)=@Thang and YEAR(NgayTra)=@nam and TraSach.MaTra=ChiTietTraSach.MaTra
+			group by day(NgayTra)
 
-select * from ChiTietTongTienThueThang(7,2022)
+select * from ChiTietTongTienThueThang(11, 2022)
 
 
 -- báo cáo doanh thu năm
-create function TongTienThueNam ( @nam int)
-returns int 
-as
-begin
-	declare @tongtien int
-	select @tongtien = sum(TongTien)  from TraSach
-					where YEAR(NgayTra)=@nam
-					group by  YEAR(NgayTra)
-	return @tongtien
-	
-end
-select  dbo.TongTienThueNam(2022)
-
-create function ChiTietTongTienThueNam( @nam int)
+alter function ChiTietTongTienThueNam(@nam int)
 returns table
-	return select TraSach.MaTra, MaThue, MaVP,MaNV,NgayTra,ThanhTien from ChiTietTraSach,TraSach
-		where  YEAR(NgayTra)=@nam and TraSach.MaTra=ChiTietTraSach.MaTra
+	return select  month(NgayTra) as Thang,sum(ThanhTien)as Tong, count(NgayTra) as SoDonHang
+			from ChiTietTraSach,TraSach
+			where  YEAR(NgayTra)=@nam and TraSach.MaTra=ChiTietTraSach.MaTra
+			group by MONTH(NgayTra)
 
 select * from ChiTietTongTienThueNam(2022)
 
---## 9. Báo cáo danh sách 5 sách truyện đạt doanh thu nhiều nhất
 
+--## 9. Báo cáo danh sách 5 sách truyện đạt doanh thu nhiều nhất
 
 create function Top5Doanhthu()
 returns table
@@ -216,3 +248,17 @@ as
 		and @MaTra = CT.MaTra
 	)
 select * from BookReturnDetail(N'TR01')
+
+-- Lấy ra năm tồn tại trong các đơn hàng
+create function LoadExistYears()
+returns table
+	return select YEAR(NgayTra) as Nam from TraSach group by (YEAR(NgayTra))
+
+go
+select * from LoadExistYears()
+-- Lấy ra tháng tồn tại trong các đơn hàng
+alter function LoadExistMonths()
+returns table
+	return select MONTH(NgayTra) as Thang from TraSach group by (MONTH(NgayTra))
+
+select * from LoadExistMonths()

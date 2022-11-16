@@ -1,5 +1,6 @@
 ﻿using BTLCSharp.Controllers;
 using BTLCSharp.RJElements;
+using BTLCSharp.View;
 using FontAwesome.Sharp;
 using Microsoft.Reporting.WinForms;
 using System;
@@ -16,6 +17,7 @@ namespace BTLCSharp
 {
     public partial class fReport : Form
     {
+        private UIBuild uiBuild = new UIBuild();
         private Button currentBtn;
         public fReport()
         {
@@ -45,35 +47,29 @@ namespace BTLCSharp
 
         private void fReport_Load(object sender, EventArgs e)
         {
-            try
-            {
-                rpvData.LocalReport.ReportEmbeddedResource = "BTLCSharp.Reports.Top5DoanhThu.rdlc";
-                ReportDataSource reportDataSource = new ReportDataSource();
-                reportDataSource.Name = "Top5DoanhThu";
-                reportDataSource.Value = DataProvider.Instance.ReadTable("select * from Top5Doanhthu()");
-                rpvData.LocalReport.DataSources.Add(reportDataSource);
-                this.rpvData.RefreshReport();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            ActiveButton(btnBooksReport);
+            uiBuild.OpenChildForm(new fReportBookStatus(), pnlBody);
         }
 
         private void btnBooksReport_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+
+            uiBuild.OpenChildForm(new fReportBookStatus(), pnlBody);
         }
 
         private void btnTurnoverReport_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+
+            uiBuild.OpenChildForm(new fReportTurnover(), pnlBody);
         }
 
         private void btnTopTurnoverReport_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+
+            uiBuild.OpenChildForm(new fReportTopTurnover(), pnlBody);
         }
 
     }

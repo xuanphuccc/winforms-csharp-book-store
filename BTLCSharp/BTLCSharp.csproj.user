@@ -49,6 +49,15 @@
     <Compile Update="View\fClientSearchComponent.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\fReportBookStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fReportTopTurnover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\fReportTurnover.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\fSearchRentalBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +72,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Update="DataSets\DoanhThuNam.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="DataSets\DoanhThuThang.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="DataSets\SachThueChuaTra.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Update="DataSets\Top5DoanhThu.xsd">
       <SubType>Designer</SubType>
     </None>

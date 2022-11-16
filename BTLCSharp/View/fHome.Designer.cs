@@ -263,11 +263,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label1.Location = new System.Drawing.Point(83, 109);
+            this.label1.Location = new System.Drawing.Point(67, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 32);
+            this.label1.Size = new System.Drawing.Size(160, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "SATELLITE";
+            this.label1.Text = "AECODEWEB";
             // 
             // ptbLogo
             // 

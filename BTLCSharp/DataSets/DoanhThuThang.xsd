@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DoanhThuThang" targetNamespace="http://tempuri.org/DoanhThuThang.xsd" xmlns:mstns="http://tempuri.org/DoanhThuThang.xsd" xmlns="http://tempuri.org/DoanhThuThang.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\bin\Debug\net6.0-windows\Database\BTLCSharp.mdf;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="BTLCSharp.mdf" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ChiTietTongTienThueThangTableAdapter" GeneratorDataComponentClassName="ChiTietTongTienThueThangTableAdapter" Name="ChiTietTongTienThueThang" UserDataComponentName="ChiTietTongTienThueThangTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BTLCSharp.mdf" DbObjectName="dbo.ChiTietTongTienThueThang" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Ngay, Tong, SoDonHang
+FROM   dbo.ChiTietTongTienThueThang(7,2022) AS ChiTietTongTienThueThang_1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ngay" DataSetColumn="Ngay" />
+              <Mapping SourceColumn="Tong" DataSetColumn="Tong" />
+              <Mapping SourceColumn="SoDonHang" DataSetColumn="SoDonHang" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DoanhThuThang" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DoanhThuThang" msprop:Generator_DataSetName="DoanhThuThang">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ChiTietTongTienThueThang" msprop:Generator_RowEvHandlerName="ChiTietTongTienThueThangRowChangeEventHandler" msprop:Generator_RowDeletedName="ChiTietTongTienThueThangRowDeleted" msprop:Generator_RowDeletingName="ChiTietTongTienThueThangRowDeleting" msprop:Generator_RowEvArgName="ChiTietTongTienThueThangRowChangeEvent" msprop:Generator_TablePropName="ChiTietTongTienThueThang" msprop:Generator_RowChangedName="ChiTietTongTienThueThangRowChanged" msprop:Generator_RowChangingName="ChiTietTongTienThueThangRowChanging" msprop:Generator_TableClassName="ChiTietTongTienThueThangDataTable" msprop:Generator_RowClassName="ChiTietTongTienThueThangRow" msprop:Generator_TableVarName="tableChiTietTongTienThueThang" msprop:Generator_UserTableName="ChiTietTongTienThueThang">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ngay" msprop:Generator_ColumnPropNameInRow="Ngay" msprop:Generator_ColumnPropNameInTable="NgayColumn" msprop:Generator_ColumnVarNameInTable="columnNgay" msprop:Generator_UserColumnName="Ngay" type="xs:int" minOccurs="0" />
+              <xs:element name="Tong" msprop:Generator_ColumnPropNameInRow="Tong" msprop:Generator_ColumnPropNameInTable="TongColumn" msprop:Generator_ColumnVarNameInTable="columnTong" msprop:Generator_UserColumnName="Tong" type="xs:int" minOccurs="0" />
+              <xs:element name="SoDonHang" msprop:Generator_ColumnPropNameInRow="SoDonHang" msprop:Generator_ColumnPropNameInTable="SoDonHangColumn" msprop:Generator_ColumnVarNameInTable="columnSoDonHang" msprop:Generator_UserColumnName="SoDonHang" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

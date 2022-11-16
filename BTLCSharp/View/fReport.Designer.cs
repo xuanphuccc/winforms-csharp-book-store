@@ -35,10 +35,8 @@ namespace BTLCSharp
             this.btnTurnoverReport = new BTLCSharp.RJElements.RJButton();
             this.btnBooksReport = new BTLCSharp.RJElements.RJButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.rpvData = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlControls.SuspendLayout();
-            this.pnlBody.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlControls
@@ -67,10 +65,10 @@ namespace BTLCSharp
             this.btnTopTurnoverReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTopTurnoverReport.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTopTurnoverReport.ForeColor = System.Drawing.Color.Black;
-            this.btnTopTurnoverReport.Location = new System.Drawing.Point(276, 13);
+            this.btnTopTurnoverReport.Location = new System.Drawing.Point(312, 13);
             this.btnTopTurnoverReport.Name = "btnTopTurnoverReport";
             this.btnTopTurnoverReport.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnTopTurnoverReport.Size = new System.Drawing.Size(171, 42);
+            this.btnTopTurnoverReport.Size = new System.Drawing.Size(185, 42);
             this.btnTopTurnoverReport.TabIndex = 3;
             this.btnTopTurnoverReport.Text = "Top doanh thu";
             this.btnTopTurnoverReport.TextColor = System.Drawing.Color.Black;
@@ -89,10 +87,10 @@ namespace BTLCSharp
             this.btnTurnoverReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTurnoverReport.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTurnoverReport.ForeColor = System.Drawing.Color.Black;
-            this.btnTurnoverReport.Location = new System.Drawing.Point(135, 13);
+            this.btnTurnoverReport.Location = new System.Drawing.Point(156, 13);
             this.btnTurnoverReport.Name = "btnTurnoverReport";
             this.btnTurnoverReport.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnTurnoverReport.Size = new System.Drawing.Size(135, 42);
+            this.btnTurnoverReport.Size = new System.Drawing.Size(150, 42);
             this.btnTurnoverReport.TabIndex = 2;
             this.btnTurnoverReport.Text = "Doanh thu";
             this.btnTurnoverReport.TextColor = System.Drawing.Color.Black;
@@ -114,7 +112,7 @@ namespace BTLCSharp
             this.btnBooksReport.Location = new System.Drawing.Point(0, 13);
             this.btnBooksReport.Name = "btnBooksReport";
             this.btnBooksReport.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.btnBooksReport.Size = new System.Drawing.Size(129, 42);
+            this.btnBooksReport.Size = new System.Drawing.Size(150, 42);
             this.btnBooksReport.TabIndex = 1;
             this.btnBooksReport.Text = "Thuê sách";
             this.btnBooksReport.TextColor = System.Drawing.Color.Black;
@@ -144,25 +142,15 @@ namespace BTLCSharp
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
-            // rpvData
-            // 
-            this.rpvData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rpvData.Location = new System.Drawing.Point(0, 0);
-            this.rpvData.Name = "ReportViewer";
-            this.rpvData.ServerReport.BearerToken = null;
-            this.rpvData.Size = new System.Drawing.Size(954, 482);
-            this.rpvData.TabIndex = 0;
-            // 
             // pnlBody
             // 
             this.pnlBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBody.Controls.Add(this.rpvData);
             this.pnlBody.Location = new System.Drawing.Point(39, 98);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(954, 482);
-            this.pnlBody.TabIndex = 2;
+            this.pnlBody.TabIndex = 3;
             // 
             // fReport
             // 
@@ -177,7 +165,6 @@ namespace BTLCSharp
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.fReport_Load);
             this.pnlControls.ResumeLayout(false);
-            this.pnlBody.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

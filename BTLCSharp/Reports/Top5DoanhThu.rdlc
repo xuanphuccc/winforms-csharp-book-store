@@ -326,7 +326,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>5 SÁCH CÓ TỔNG DOANH THU CAO NHẤT</Value>
+                    <Value>BÁO CÁO 5 SÁCH CÓ TỔNG DOANH THU CAO NHẤT</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -360,7 +360,7 @@
         <Top>0.45861cm</Top>
         <Left>1.00518cm</Left>
         <Height>4.14634cm</Height>
-        <Width>19.02764cm</Width>
+        <Width>19.02765cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -368,7 +368,7 @@
         </Style>
       </Rectangle>
     </ReportItems>
-    <Height>7.42717cm</Height>
+    <Height>5.93995cm</Height>
     <Style />
   </Body>
   <Width>21.09611cm</Width>
@@ -399,7 +399,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>CÔNG TY CỔ PHẦN GIẢI PHÁP CÔNG NGHỆ SATELLITE</Value>
+                  <Value>CÔNG TY CỔ PHẦN GIẢI PHÁP CÔNG NGHỆ AECODEWEB</Value>
                   <Style>
                     <Color>DimGray</Color>
                   </Style>
@@ -410,7 +410,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Địa chỉ: Số 3 đường Cầu Giấy, Láng Thượng, Đống Đa, Hà nội</Value>
+                  <Value>Địa chỉ: Số 3 đường Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội</Value>
                   <Style>
                     <Color>DimGray</Color>
                   </Style>
@@ -423,7 +423,7 @@
           <Top>0.62301cm</Top>
           <Left>2.22814cm</Left>
           <Height>1.16486cm</Height>
-          <Width>17.38134cm</Width>
+          <Width>17.80467cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -442,6 +442,51 @@
         </Border>
       </Style>
     </PageHeader>
+    <PageFooter>
+      <Height>1.0757cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox4">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>© 2022 AECODEWEB. All rights reserved.</Value>
+                  <Style>
+                    <Color>DimGray</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>0.17639cm</Top>
+          <Left>1.00516cm</Left>
+          <Height>0.70583cm</Height>
+          <Width>19.02765cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BackgroundColor>LightGrey</BackgroundColor>
+      </Style>
+    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>0cm</LeftMargin>

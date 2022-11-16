@@ -9,7 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Reports\BookStatus.rdlc" />
     <None Remove="Reports\Top5DoanhThu.rdlc" />
+    <None Remove="Reports\TurnoverMonths.rdlc" />
+    <None Remove="Reports\TurnoverYears.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Reports\TurnoverYears.rdlc" />
+    <EmbeddedResource Include="Reports\TurnoverMonths.rdlc" />
+    <EmbeddedResource Include="Reports\BookStatus.rdlc" />
     <EmbeddedResource Include="Reports\Top5DoanhThu.rdlc" />
   </ItemGroup>
 
@@ -47,6 +53,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="DataSets\DoanhThuNam.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DoanhThuNam.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\DoanhThuThang.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DoanhThuThang.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSets\SachThueChuaTra.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SachThueChuaTra.xsd</DependentUpon>
+    </Compile>
     <Compile Update="DataSets\Top5DoanhThu.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -67,6 +88,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="DataSets\DoanhThuNam.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DoanhThuNam.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\DoanhThuThang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DoanhThuThang.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSets\SachThueChuaTra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SachThueChuaTra.Designer.cs</LastGenOutput>
+    </None>
     <None Update="DataSets\Top5DoanhThu.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Top5DoanhThu.Designer.cs</LastGenOutput>
