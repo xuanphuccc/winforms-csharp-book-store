@@ -30,29 +30,16 @@ namespace BTLCSharp
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvReport = new System.Windows.Forms.DataGridView();
             this.pnlControls = new System.Windows.Forms.Panel();
-            this.btnTopTurnoverReport = new RJButton();
-            this.btnTurnoverReport = new RJButton();
-            this.btnBooksReport = new RJButton();
+            this.btnTopTurnoverReport = new BTLCSharp.RJElements.RJButton();
+            this.btnTurnoverReport = new BTLCSharp.RJElements.RJButton();
+            this.btnBooksReport = new BTLCSharp.RJElements.RJButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
+            this.rpvData = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlControls.SuspendLayout();
+            this.pnlBody.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dgvReport
-            // 
-            this.dgvReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvReport.BackgroundColor = System.Drawing.Color.White;
-            this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReport.Location = new System.Drawing.Point(39, 98);
-            this.dgvReport.Name = "dgvReport";
-            this.dgvReport.RowHeadersWidth = 62;
-            this.dgvReport.RowTemplate.Height = 33;
-            this.dgvReport.Size = new System.Drawing.Size(954, 482);
-            this.dgvReport.TabIndex = 0;
             // 
             // pnlControls
             // 
@@ -157,30 +144,51 @@ namespace BTLCSharp
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
+            // rpvData
+            // 
+            this.rpvData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpvData.Location = new System.Drawing.Point(0, 0);
+            this.rpvData.Name = "ReportViewer";
+            this.rpvData.ServerReport.BearerToken = null;
+            this.rpvData.Size = new System.Drawing.Size(954, 482);
+            this.rpvData.TabIndex = 0;
+            // 
+            // pnlBody
+            // 
+            this.pnlBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlBody.Controls.Add(this.rpvData);
+            this.pnlBody.Location = new System.Drawing.Point(39, 98);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(954, 482);
+            this.pnlBody.TabIndex = 2;
+            // 
             // fReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1033, 615);
+            this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlControls);
-            this.Controls.Add(this.dgvReport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fReport";
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
+            this.Load += new System.EventHandler(this.fReport_Load);
             this.pnlControls.ResumeLayout(false);
+            this.pnlBody.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DataGridView dgvReport;
         private Panel pnlControls;
         private FontAwesome.Sharp.IconButton iconButton1;
         private RJButton btnTopTurnoverReport;
         private RJButton btnTurnoverReport;
         private RJButton btnBooksReport;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvData;
+        private Panel pnlBody;
     }
 }

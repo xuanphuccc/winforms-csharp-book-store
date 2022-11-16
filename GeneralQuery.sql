@@ -18,7 +18,7 @@ where MaSach=@masach
 end
 
 go
--- Xóa phiếu thuê (Đã test)
+-- Xóa chi tiết phiếu thuê (Đã test)
 create trigger HuyThueSach on chitietthuesach for delete as
 begin
 declare @masach nvarchar(10)
@@ -68,7 +68,7 @@ select * from UnpaidBook(N'TH01')
 go
 --## 4. Tính Thành tiền trong bảng Chi tiết trả sách
 -- bằng Đơn giá thuê * Số ngày thuê + Tiền phạt (nếu có)
-create alter trigger TraSachThuVien2 on ChiTietTraSach for insert, update as
+create trigger TraSachThuVien2 on ChiTietTraSach for insert, update as
 begin
 	declare @masach nvarchar(10),@mathue nvarchar(10),@matra nvarchar(10),@thanhtien int,@tongtien int
 	select @masach= MaSach from inserted
@@ -118,12 +118,64 @@ group by TenSach
 
 --## 8. Báo cáo tổng tiền cho thuê thu được của cửa hàng theo tháng, quý, năm.
 -- (Đang chỉnh sửa)
+--báo cáo doanh thu tháng
+create function TongTienThueThang (@Thang int, @nam int)
+returns int 
+as
+begin
+	declare @tongtien int
+	select @tongtien = sum(TongTien)  from TraSach
+					where month(NgayTra)=@Thang and YEAR(NgayTra)=@nam
+					group by month(NgayTra), YEAR(NgayTra)
+	return @tongtien
+	
+end
+select  dbo.TongTienThueThang(7,2022)
+
+
+create function ChiTietTongTienThueThang(@Thang int, @nam int)
+returns table
+	return select TraSach.MaTra, MaThue, MaVP,MaNV,NgayTra,ThanhTien from ChiTietTraSach,TraSach
+		where month(NgayTra)=@Thang and YEAR(NgayTra)=@nam and TraSach.MaTra=ChiTietTraSach.MaTra
+
+select * from ChiTietTongTienThueThang(7,2022)
+
+
+-- báo cáo doanh thu năm
+create function TongTienThueNam ( @nam int)
+returns int 
+as
+begin
+	declare @tongtien int
+	select @tongtien = sum(TongTien)  from TraSach
+					where YEAR(NgayTra)=@nam
+					group by  YEAR(NgayTra)
+	return @tongtien
+	
+end
+select  dbo.TongTienThueNam(2022)
+
+create function ChiTietTongTienThueNam( @nam int)
+returns table
+	return select TraSach.MaTra, MaThue, MaVP,MaNV,NgayTra,ThanhTien from ChiTietTraSach,TraSach
+		where  YEAR(NgayTra)=@nam and TraSach.MaTra=ChiTietTraSach.MaTra
+
+select * from ChiTietTongTienThueNam(2022)
 
 --## 9. Báo cáo danh sách 5 sách truyện đạt doanh thu nhiều nhất
-select top(5) TenSach,sum(thanhtien) as TongDoanhThu from ChiTietTraSach,Sach
-where sach.MaSach=ChiTietTraSach.MaSach
-group by TenSach
-order by sum(thanhtien) desc
+
+
+create function Top5Doanhthu()
+returns table
+as
+	return (
+		select top(5) TenSach,sum(thanhtien) as TongDoanhThu from ChiTietTraSach,Sach
+		where sach.MaSach=ChiTietTraSach.MaSach
+		group by TenSach
+		order by sum(thanhtien) desc
+	)
+
+	select * from Top5Doanhthu()
 
 -- ============ PHẦN BỔ SUNG ============
 -- Load danh sách phiếu thuê bổ sung thêm trường TenKH

@@ -13,6 +13,7 @@
     <SourceRoot Include="C:\Users\xuanphucc\.nuget\packages\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\xuanphucc\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.2</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgFontAwesome Condition=" '$(PkgFontAwesome)' == '' ">C:\Users\xuanphucc\.nuget\packages\fontawesome\4.7.0</PkgFontAwesome>
   </PropertyGroup>
 </Project>

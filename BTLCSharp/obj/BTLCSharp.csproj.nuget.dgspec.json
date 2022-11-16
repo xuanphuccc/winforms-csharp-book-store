@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[6.1.1, )"
             },
+            "ReportViewerCore.WinForms": {
+              "target": "Package",
+              "version": "[15.1.17, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.4, )"
