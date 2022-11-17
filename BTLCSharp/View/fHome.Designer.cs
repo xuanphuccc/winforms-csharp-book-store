@@ -39,11 +39,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMinimize = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.titleLabel = new System.Windows.Forms.Label();
             this.titleIcon = new FontAwesome.Sharp.IconPictureBox();
             this.pnlMain = new System.Windows.Forms.Panel();
@@ -53,8 +48,6 @@
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
-            this.pnlTitle.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.titleIcon)).BeginInit();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,9 +69,9 @@
             this.pnlMenu.Controls.Add(this.btnBookManagement);
             this.pnlMenu.Controls.Add(this.btnHome);
             this.pnlMenu.Controls.Add(this.panel2);
-            this.pnlMenu.Location = new System.Drawing.Point(0, 46);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(300, 732);
+            this.pnlMenu.Size = new System.Drawing.Size(300, 778);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnStaffManagement
@@ -142,7 +135,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton1.IconSize = 32;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 660);
+            this.iconButton1.Location = new System.Drawing.Point(0, 706);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.iconButton1.Size = new System.Drawing.Size(300, 72);
@@ -281,76 +274,6 @@
             this.ptbLogo.TabStop = false;
             this.ptbLogo.Click += new System.EventHandler(this.ptbLogo_Click);
             // 
-            // pnlTitle
-            // 
-            this.pnlTitle.BackColor = System.Drawing.Color.White;
-            this.pnlTitle.Controls.Add(this.panel1);
-            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(1369, 48);
-            this.pnlTitle.TabIndex = 1;
-            this.pnlTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitle_MouseDown);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.btnMaximize);
-            this.panel1.Location = new System.Drawing.Point(1239, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(130, 42);
-            this.panel1.TabIndex = 5;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.btnMinimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(194)))), ((int)(((byte)(87)))));
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMinimize.IconSize = 32;
-            this.btnMinimize.Location = new System.Drawing.Point(7, 3);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(36, 36);
-            this.btnMinimize.TabIndex = 4;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(106)))), ((int)(((byte)(97)))));
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(91, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 36);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.Circle;
-            this.btnMaximize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(191)))), ((int)(((byte)(47)))));
-            this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnMaximize.IconSize = 32;
-            this.btnMaximize.Location = new System.Drawing.Point(49, 3);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(36, 36);
-            this.btnMaximize.TabIndex = 3;
-            this.btnMaximize.UseVisualStyleBackColor = true;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
@@ -370,11 +293,12 @@
             this.titleIcon.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.titleIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.titleIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.titleIcon.IconSize = 48;
-            this.titleIcon.Location = new System.Drawing.Point(17, 8);
+            this.titleIcon.IconSize = 36;
+            this.titleIcon.Location = new System.Drawing.Point(21, 13);
             this.titleIcon.Name = "titleIcon";
             this.titleIcon.Padding = new System.Windows.Forms.Padding(6, 6, 0, 0);
-            this.titleIcon.Size = new System.Drawing.Size(48, 48);
+            this.titleIcon.Size = new System.Drawing.Size(36, 36);
+            this.titleIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.titleIcon.TabIndex = 0;
             this.titleIcon.TabStop = false;
             // 
@@ -385,9 +309,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMain.BackColor = System.Drawing.Color.White;
             this.pnlMain.Controls.Add(this.pictureBox1);
-            this.pnlMain.Location = new System.Drawing.Point(0, 68);
+            this.pnlMain.Location = new System.Drawing.Point(0, 74);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1070, 662);
+            this.pnlMain.Size = new System.Drawing.Size(1070, 704);
             this.pnlMain.TabIndex = 2;
             // 
             // pictureBox1
@@ -398,7 +322,7 @@
             this.pictureBox1.Image = global::BTLCSharp.Properties.Resources.background2;
             this.pictureBox1.Location = new System.Drawing.Point(47, 34);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(979, 595);
+            this.pictureBox1.Size = new System.Drawing.Size(979, 637);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -421,30 +345,28 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBody.Controls.Add(this.panel3);
             this.pnlBody.Controls.Add(this.pnlMain);
-            this.pnlBody.Location = new System.Drawing.Point(299, 48);
+            this.pnlBody.Location = new System.Drawing.Point(299, 0);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1070, 730);
+            this.pnlBody.Size = new System.Drawing.Size(1070, 778);
             this.pnlBody.TabIndex = 4;
             // 
             // fHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1369, 778);
-            this.ControlBox = false;
             this.Controls.Add(this.pnlBody);
-            this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlMenu);
             this.DoubleBuffered = true;
-            this.MinimumSize = new System.Drawing.Size(1000, 600);
+            this.MinimumSize = new System.Drawing.Size(1391, 834);
             this.Name = "fHome";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
-            this.pnlTitle.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.titleIcon)).EndInit();
             this.pnlMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -464,14 +386,9 @@
         private FontAwesome.Sharp.IconButton btnClient;
         private FontAwesome.Sharp.IconButton btnRental;
         private FontAwesome.Sharp.IconButton btnBookManagement;
-        private Panel pnlTitle;
         private Label titleLabel;
         private FontAwesome.Sharp.IconPictureBox titleIcon;
-        private FontAwesome.Sharp.IconButton btnClose;
-        private FontAwesome.Sharp.IconButton btnMinimize;
-        private FontAwesome.Sharp.IconButton btnMaximize;
         private Panel pnlMain;
-        private Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Panel panel3;
         private Label label1;

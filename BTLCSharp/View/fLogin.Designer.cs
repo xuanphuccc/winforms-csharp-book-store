@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnToggleShowPassword = new FontAwesome.Sharp.IconButton();
+            this.lbNotification = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnExit = new BTLCSharp.RJElements.RJButton();
@@ -48,6 +50,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Controls.Add(this.btnToggleShowPassword);
+            this.panel1.Controls.Add(this.lbNotification);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnExit);
@@ -61,6 +65,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(581, 684);
             this.panel1.TabIndex = 0;
+            // 
+            // btnToggleShowPassword
+            // 
+            this.btnToggleShowPassword.FlatAppearance.BorderSize = 0;
+            this.btnToggleShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToggleShowPassword.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnToggleShowPassword.IconColor = System.Drawing.Color.DimGray;
+            this.btnToggleShowPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnToggleShowPassword.IconSize = 28;
+            this.btnToggleShowPassword.Location = new System.Drawing.Point(481, 440);
+            this.btnToggleShowPassword.Name = "btnToggleShowPassword";
+            this.btnToggleShowPassword.Size = new System.Drawing.Size(45, 39);
+            this.btnToggleShowPassword.TabIndex = 18;
+            this.btnToggleShowPassword.UseVisualStyleBackColor = true;
+            this.btnToggleShowPassword.Click += new System.EventHandler(this.btnToggleShowPassword_Click);
+            // 
+            // lbNotification
+            // 
+            this.lbNotification.AutoSize = true;
+            this.lbNotification.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbNotification.ForeColor = System.Drawing.Color.Red;
+            this.lbNotification.Location = new System.Drawing.Point(46, 489);
+            this.lbNotification.Margin = new System.Windows.Forms.Padding(3, 4, 3, 0);
+            this.lbNotification.Name = "lbNotification";
+            this.lbNotification.Size = new System.Drawing.Size(0, 28);
+            this.lbNotification.TabIndex = 17;
             // 
             // label4
             // 
@@ -188,6 +218,7 @@
             this.txtUsername.TabIndex = 9;
             this.txtUsername.Texts = "";
             this.txtUsername.UnderlinedStyle = false;
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // pictureBox2
             // 
@@ -220,6 +251,7 @@
             this.ClientSize = new System.Drawing.Size(1329, 683);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "fLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -244,5 +276,7 @@
         private RJElements.RJButton btnExit;
         private RJElements.RJButton btnLogin;
         private Label label4;
+        private Label lbNotification;
+        private FontAwesome.Sharp.IconButton btnToggleShowPassword;
     }
 }

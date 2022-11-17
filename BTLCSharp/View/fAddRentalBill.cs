@@ -127,38 +127,46 @@ namespace BTLCSharp.View
         {
             if(checkInputs())
             {
+                Account? user = AccountDAO.Instance.User;
                 string rentalDate = dtpRentalDate.Value.Year.ToString() + "/" +
                               dtpRentalDate.Value.Month.ToString() + "/" +
                               dtpRentalDate.Value.Day.ToString();
 
-                RentalBill rentalBill = new RentalBill(
-                    txtId.Texts,
-                    txtClientId.Texts,
-                    "NV01",
-                    rentalDate,
-                    "100000"
-                );
-
-                int rentalBillResult = RentalBillDAO.Instance.CreateRentalBill(rentalBill);
-                if(rentalBillResult != 0)
+                if(user != null)
                 {
-                    int rentalBillDetailResult = 1;
-                    foreach(RentalBillDetail item in rentalBillDetailList)
+                    RentalBill rentalBill = new RentalBill(
+                        txtId.Texts,
+                        txtClientId.Texts,
+                        user.StaffId,
+                        rentalDate,
+                        "100000"
+                    );
+
+                    int rentalBillResult = RentalBillDAO.Instance.CreateRentalBill(rentalBill);
+                    if (rentalBillResult != 0)
                     {
-                        item.RentalBillId = rentalBill.Id;
-                        if(RentalBillDetailDAO.Instance.CreateRentalBillDetail(item) == 0)
+                        int rentalBillDetailResult = 1;
+                        foreach (RentalBillDetail item in rentalBillDetailList)
                         {
-                            rentalBillDetailResult = 0;
-                            break;
+                            item.RentalBillId = rentalBill.Id;
+                            if (RentalBillDetailDAO.Instance.CreateRentalBillDetail(item) == 0)
+                            {
+                                rentalBillDetailResult = 0;
+                                break;
+                            }
                         }
-                    }
-                    
-                    if(rentalBillDetailResult != 0)
-                    {
-                        clearInputs();
-                        cboBooksName.DataSource = BookDAO.Instance.LoadBooksList("where SoLuong > 0"); // Reload
-                        dgvData.DataSource = null;
-                        MessageBox.Show("Tạo phiếu thuê thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        if (rentalBillDetailResult != 0)
+                        {
+                            clearInputs();
+                            cboBooksName.DataSource = BookDAO.Instance.LoadBooksList("where SoLuong > 0"); // Reload
+                            dgvData.DataSource = null;
+                            MessageBox.Show("Tạo phiếu thuê thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tạo phiếu thuê thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     } else
                     {
                         MessageBox.Show("Tạo phiếu thuê thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

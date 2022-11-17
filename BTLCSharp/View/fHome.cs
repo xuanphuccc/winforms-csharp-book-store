@@ -9,7 +9,6 @@ namespace BTLCSharp
         UIBuild uiBuild = new UIBuild(); 
         private IconButton currentBtn;
         private Panel borderLeftBtn;
-        private Panel bottomBorder;
         private Panel leftBodyBorder;
 
         public fHome()
@@ -25,16 +24,6 @@ namespace BTLCSharp
             ActiveButton(btnHome);
 
             // title bottom border
-            bottomBorder = new Panel();
-            bottomBorder.Size = new Size(pnlTitle.Width, 1);
-            bottomBorder.Location = new Point(0, pnlTitle.Height - 1);
-            bottomBorder.BackColor = Color.FromArgb(220, 220, 220);
-            bottomBorder.Dock = DockStyle.Bottom;
-            pnlTitle.Controls.Add(bottomBorder);
-            bottomBorder.Visible = true;
-            bottomBorder.BringToFront();
-
-            // title bottom border
             leftBodyBorder = new Panel();
             leftBodyBorder.Size = new Size(1, pnlBody.Height);
             leftBodyBorder.Location = new Point(0, 0);
@@ -43,9 +32,6 @@ namespace BTLCSharp
             pnlBody.Controls.Add(leftBodyBorder);
             leftBodyBorder.Visible = true;
             leftBodyBorder.BringToFront();
-
-            // Title
-            titleIcon.IconSize = 36;
 
             // Form
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -79,18 +65,6 @@ namespace BTLCSharp
             {
                 currentBtn.BackColor = Color.FromArgb(255,255,255);
             }
-        }
-
-
-        // Drag form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void pnlTitle_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -149,24 +123,9 @@ namespace BTLCSharp
             ActiveButton(btnHome);
             titleIcon.IconChar = IconChar.Home;
             titleLabel.Text = "Trang chủ";
-            //borderLeftBtn.Visible = false;
 
             // Close curent child form
             uiBuild.CloseCurrentChildForm();
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else WindowState = FormWindowState.Normal;
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

@@ -9,7 +9,7 @@ go
 
 --## 2. Khi khách hàng thuê sách hoặc trả sách thì cập nhật lại Số lượng sách 						
 --trong bảng Sách truyện.
--- Thêm, sửa phiếu thuê (Đã test thêm phiếu thuê)
+-- Thêm, sửa phiếu thuê
 create trigger ThueSachThuVien on chitietthuesach for insert, update as
 begin
 declare @masach nvarchar(10)
@@ -20,17 +20,8 @@ where MaSach=@masach
 end
 
 go
--- Xóa chi tiết phiếu thuê (Đã test)
---create trigger HuyThueSach on chitietthuesach for delete as
---begin
---declare @masach nvarchar(10)
---select @masach= MaSach from deleted
---update Sach
---set SoLuong=SoLuong + 1
---where MaSach=@masach
---end
 
--- Mới
+-- Xóa chi tiết phiếu thuê
 create trigger HuyThueSachThuVien on ChiTietThueSach for delete as
 begin
 	declare @masach nvarchar(10)
@@ -49,7 +40,6 @@ begin
 	close MaThueCursor
 	deallocate MaThueCursor
 end
---Mới
 
 
 -- Thêm, sửa phiếu trả
@@ -63,19 +53,9 @@ where MaSach=@masach
 end
 
 go
+
 -- Xóa phiếu trả
---create trigger HuyTraSach on ChiTietTraSach for delete as
---begin
---declare @masach nvarchar(10)
---select @masach= MaSach from deleted
---update Sach
---set SoLuong=SoLuong - 1
---where MaSach=@masach
---end
-
-
---Mới
-create trigger HuyTraSachThuVien on ChiTietTraSach for delete as
+create trigger CancelReturnBill on ChiTietTraSach for delete as
 begin
 	declare @masach nvarchar(10),@mathue nvarchar(10),@masach2 nvarchar(10)
 	select @masach= MaSach from deleted
@@ -102,14 +82,6 @@ begin
 	close MaTraCursor
 	deallocate MaTraCursor
 end
--- Mới
-select * from ChiTietTraSach
-select * from TraSach
-select * from Sach
-
-delete ChiTietTraSach where MaTra = N'TR01'
-go
-delete TraSach where MaTra = N'TR01'
 
 
 --## 3. Khi khách hàng trả sách chỉ hiển thị các sách chưa trả từ mã thuê sách tương ứng.
@@ -124,8 +96,9 @@ as
 go
 
 select * from UnpaidBook(N'TH01')
-
 go
+
+
 --## 4. Tính Thành tiền trong bảng Chi tiết trả sách
 -- bằng Đơn giá thuê * Số ngày thuê + Tiền phạt (nếu có)
 create trigger TinhTien on ChiTietTraSach for insert, update as
@@ -156,16 +129,6 @@ begin
 	where MaTra=@matra
 end
 
--- test
-select * from ChiTietTraSach
-
-insert TraSach values ('TR05', 'TH07', 'NV01', '2022-11-20', 0)
-
-insert ChiTietTraSach
-values
-('TR05', 'S05', 'VP00', null)
-
-
 --## 5. Tìm kiếm Sách truyện theo tiêu chí: Tên sách, lĩnh vực, tác giả, NXB.
 -- (Đã xong)
 --## 6. Tìm kiếm Nhân viên theo tiêu chí: Tên nhân viên, ca làm, giới tính.
@@ -181,8 +144,9 @@ returns table
 
 select * from ReportSachThueChuaTra()
 
+
 --## 8. Báo cáo tổng tiền cho thuê thu được của cửa hàng theo tháng, quý, năm.
--- (Đang chỉnh sửa)
+
 --báo cáo doanh thu tháng
 create function ChiTietTongTienThueThang(@Thang int, @nam int)
 returns table
@@ -219,6 +183,7 @@ as
 
 	select * from Top5Doanhthu()
 
+
 -- ============ PHẦN BỔ SUNG ============
 -- Load danh sách phiếu thuê bổ sung thêm trường TenKH
 create function LoadBookRental()
@@ -234,16 +199,16 @@ select * from LoadBookRental()
 
 -- Lấy ra thông tin các sách ĐÃ THUÊ từ mã thuê sách tương ứng
 -- (ChiTietThueSach bổ sung thêm trường TenSach)
-create function BookRentalDetail(@MaThue nvarchar(10))
+alter function BookRentalDetail(@MaThue nvarchar(10))
 returns table
 as
 	return (
-		select CT.MaThue, S.MaSach, S.TenSach, CT.MaTT, CT.DaTra
+		select CT.MaThue, S.MaSach, S.TenSach, CT.MaTT, DaTra
 		from ChiTietThueSach as CT, Sach as S
 		where CT.MaSach = S.MaSach
 		and @MaThue = CT.MaThue
 	)
-select * from BookRentalDetail(N'TH05')
+select * from BookRentalDetail(N'TH01')
 
 
 -- Lấy ra thông tin các sách ĐÃ TRẢ	 từ mã trả sách tương ứng

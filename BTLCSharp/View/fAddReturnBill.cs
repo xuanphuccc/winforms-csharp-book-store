@@ -96,62 +96,67 @@ namespace BTLCSharp.View
         {
             if(checkInputs())
             {
+                Account? user = AccountDAO.Instance.User;
                 string returnDate = dtpReturnDate.Value.Year.ToString() + "/" +
                               dtpReturnDate.Value.Month.ToString() + "/" +
                               dtpReturnDate.Value.Day.ToString();
 
-                // Create Return Bill
-                ReturnBill returnBill = new ReturnBill(
-                    txtId.Texts,
-                    txtRentalId.Texts,
-                    "NV01",
-                    returnDate,
-                    0
-                );
-
-                if(isCreatedReturnBill == "")
+                if(user != null)
                 {
-                    int createdReturnBill = ReturnBillDAO.Instance.CreateReturnBill(returnBill);
+                    // Create Return Bill
+                    ReturnBill returnBill = new ReturnBill(
+                        txtId.Texts,
+                        txtRentalId.Texts,
+                        user.StaffId,
+                        returnDate,
+                        0
+                    );
 
-                    if(createdReturnBill != 0)
+                    if (isCreatedReturnBill == "")
                     {
-                        // Change Create Return Bill Status to TRUE
-                        isCreatedReturnBill = returnBill.Id;
-                    }
-                }
+                        int createdReturnBill = ReturnBillDAO.Instance.CreateReturnBill(returnBill);
 
-                if(isCreatedReturnBill != "")
-                {
-                    // Create Return Bill Detail
-                    Book book = (Book)cboBooksName.SelectedItem;
-                    Destruction destruction = (Destruction)cboDestruction.SelectedItem;
-
-                    if(book != null && destruction != null)
-                    {
-                        ReturnBillDetail returnBillDetail = new ReturnBillDetail(
-                            returnBill.Id,
-                            book.Id,
-                            book.Name,
-                            destruction.Id,
-                            0
-                        );
-                        int createdReturnBillDetail = ReturnBillDetailDAO.Instance.CreateReturnBillDetail(returnBillDetail);
-
-                        if (createdReturnBillDetail != 0)
+                        if (createdReturnBill != 0)
                         {
-                            // Successful
-                            LoadData(returnBill.Id);
-                            LoadCboBookNameData();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Thêm sách vào phiếu trả thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            // Change Create Return Bill Status to TRUE
+                            isCreatedReturnBill = returnBill.Id;
                         }
                     }
 
-                } else
-                {
-                    MessageBox.Show("Không thể tạo phiếu trả sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    if (isCreatedReturnBill != "")
+                    {
+                        // Create Return Bill Detail
+                        Book book = (Book)cboBooksName.SelectedItem;
+                        Destruction destruction = (Destruction)cboDestruction.SelectedItem;
+
+                        if (book != null && destruction != null)
+                        {
+                            ReturnBillDetail returnBillDetail = new ReturnBillDetail(
+                                returnBill.Id,
+                                book.Id,
+                                book.Name,
+                                destruction.Id,
+                                0
+                            );
+                            int createdReturnBillDetail = ReturnBillDetailDAO.Instance.CreateReturnBillDetail(returnBillDetail);
+
+                            if (createdReturnBillDetail != 0)
+                            {
+                                // Successful
+                                LoadData(returnBill.Id);
+                                LoadCboBookNameData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Thêm sách vào phiếu trả thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể tạo phiếu trả sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
             }
         }
@@ -163,12 +168,13 @@ namespace BTLCSharp.View
                 isClickCreateBtn = true;
                 MessageBox.Show("Tạo phiếu trả thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clearInputs();
+            } else if (isCreatedReturnBill == "") {
+                MessageBox.Show("Chưa chọn sách để trả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void fAddReturnBill_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("Đang hủy trả sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (isCreatedReturnBill != "" && isClickCreateBtn == false)
             {
                 int deletedReturnBillDetail = ReturnBillDetailDAO.Instance.DeleteReturnBillDetail(isCreatedReturnBill);

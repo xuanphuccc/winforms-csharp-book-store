@@ -19,13 +19,18 @@ namespace BTLCSharp.Controllers
 
         public Account? User {
             get => user;
-            private set => user = value;
         }
 
         public bool Login(string username, string password)
         {
-            DataTable data = DataProvider.Instance.ReadTable($"select * from DangNhap(N'{username}', N'{password}'");
-            
+            DataTable data = DataProvider.Instance.ReadTable($"select * from DangNhap(N'{username}', N'{password}')");
+
+            if(data != null && data.Rows.Count > 0)
+            {
+                user = new Account(data.Rows[0]);
+                return true;
+            }
+
             return false;
         }
     }
