@@ -75,6 +75,10 @@ namespace BTLCSharp.View
                 if (item.Checked) gender = item.Text;
             }
 
+            string dateOfBirth = dtpDateOfBirth.Value.Year.ToString() + "/" +
+                              dtpDateOfBirth.Value.Month.ToString() + "/" +
+                              dtpDateOfBirth.Value.Day.ToString();
+
             Staff staffData = null;
             if(checkInputs())
             {
@@ -82,7 +86,7 @@ namespace BTLCSharp.View
                     txtId.Texts,
                     txtName.Texts,
                     cboShift.Texts,
-                    dtpDateOfBirth.Text,
+                    dateOfBirth,
                     gender,
                     txtLocation.Texts,
                     txtPhoneNumber.Texts,

@@ -107,6 +107,7 @@ namespace BTLCSharp.View
 
                 dgvData.DataSource = null; // Reset data
                 dgvData.DataSource = rentalBillDetailList;
+
                 // Change columns name
                 dgvData.Columns[0].HeaderText = "Mã phiếu thuê";
                 dgvData.Columns[0].MinimumWidth = 160;
@@ -126,11 +127,15 @@ namespace BTLCSharp.View
         {
             if(checkInputs())
             {
+                string rentalDate = dtpRentalDate.Value.Year.ToString() + "/" +
+                              dtpRentalDate.Value.Month.ToString() + "/" +
+                              dtpRentalDate.Value.Day.ToString();
+
                 RentalBill rentalBill = new RentalBill(
                     txtId.Texts,
                     txtClientId.Texts,
                     "NV01",
-                    dtpRentalDate.Text,
+                    rentalDate,
                     "100000"
                 );
 
@@ -151,6 +156,8 @@ namespace BTLCSharp.View
                     if(rentalBillDetailResult != 0)
                     {
                         clearInputs();
+                        cboBooksName.DataSource = BookDAO.Instance.LoadBooksList("where SoLuong > 0"); // Reload
+                        dgvData.DataSource = null;
                         MessageBox.Show("Tạo phiếu thuê thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     } else
                     {

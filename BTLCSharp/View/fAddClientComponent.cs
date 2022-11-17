@@ -67,13 +67,17 @@ namespace BTLCSharp.View
                 if(item.Checked) gender = item.Text;
             }
 
+            string dateOfBirth = dtpDateOfBirth.Value.Year.ToString() + "/" +
+                              dtpDateOfBirth.Value.Month.ToString() + "/" +
+                              dtpDateOfBirth.Value.Day.ToString();
+
             Client clientData = null;
             if(checkInputs())
             {
                 clientData = new Client(
                     txtId.Texts,
                     txtName.Texts,
-                    dtpDateOfBirth.Text,
+                    dateOfBirth,
                     gender,
                     txtLocation.Texts
                 );

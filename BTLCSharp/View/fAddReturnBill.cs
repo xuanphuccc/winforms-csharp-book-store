@@ -96,12 +96,16 @@ namespace BTLCSharp.View
         {
             if(checkInputs())
             {
+                string returnDate = dtpReturnDate.Value.Year.ToString() + "/" +
+                              dtpReturnDate.Value.Month.ToString() + "/" +
+                              dtpReturnDate.Value.Day.ToString();
+
                 // Create Return Bill
                 ReturnBill returnBill = new ReturnBill(
                     txtId.Texts,
                     txtRentalId.Texts,
                     "NV01",
-                    dtpReturnDate.Text,
+                    returnDate,
                     0
                 );
 
@@ -135,7 +139,7 @@ namespace BTLCSharp.View
 
                         if (createdReturnBillDetail != 0)
                         {
-                            MessageBox.Show("Thêm sách vào phiếu trả thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            // Successful
                             LoadData(returnBill.Id);
                             LoadCboBookNameData();
                         }
@@ -164,6 +168,7 @@ namespace BTLCSharp.View
 
         private void fAddReturnBill_FormClosing(object sender, FormClosingEventArgs e)
         {
+            MessageBox.Show("Đang hủy trả sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (isCreatedReturnBill != "" && isClickCreateBtn == false)
             {
                 int deletedReturnBillDetail = ReturnBillDetailDAO.Instance.DeleteReturnBillDetail(isCreatedReturnBill);
