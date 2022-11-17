@@ -75,6 +75,15 @@ create table NhanVien(
 )
 go
 
+create table TaiKhoan(
+	MaNV nvarchar(10) primary key,
+	TenDangNhap nvarchar(50),
+	MatKhau nvarchar(50),
+
+	constraint fk_tk_nv foreign key (MaNV) references NhanVien(MaNV)
+)
+go
+
 create table KhachHang(
 	MaKH nvarchar(10) not null primary key,
 	TenKH nvarchar(50),
@@ -206,6 +215,13 @@ values
 ('NV03', N'Nguyễn Đình Đạt', 'C03', '2000-04-23', N'Nam', 'Hà Nội', '0868455779', 4000000),
 ('NV04', N'Phạm Đình Thái', 'C02', '1999-02-19', N'Nam', 'Hải Dương', '0989354221', 3200000),
 ('NV05', N'Vũ Thảo Hiền', 'C01', '2000-10-28', N'Nữ', 'Hà Nội', '0189445729', 3450000)
+go
+
+insert TaiKhoan values(N'NV01', N'NV01', N'123456')
+insert TaiKhoan values(N'NV02', N'NV02', N'123456')
+insert TaiKhoan values(N'NV03', N'NV03', N'123456')
+insert TaiKhoan values(N'NV04', N'NV04', N'123456')
+insert TaiKhoan values(N'NV05', N'NV05', N'123456')
 go
 
 insert KhachHang

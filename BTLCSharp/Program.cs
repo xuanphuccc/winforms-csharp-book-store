@@ -1,3 +1,5 @@
+using BTLCSharp.View;
+
 namespace BTLCSharp
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace BTLCSharp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new fHome());
+            Application.Run(new fLogin());
         }
     }
 }

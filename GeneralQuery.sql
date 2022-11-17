@@ -1,4 +1,6 @@
-﻿--## 1. Trong bảng Chi tiết thuê sách chỉ hiển thị các sách có số lượng > 0.
+﻿
+
+--## 1. Trong bảng Chi tiết thuê sách chỉ hiển thị các sách có số lượng > 0.
 select *
 from Sach
 where SoLuong > 0
@@ -75,7 +77,7 @@ go
 --Mới
 create trigger HuyTraSachThuVien on ChiTietTraSach for delete as
 begin
-	declare @masach nvarchar(10),@mathue nvarchar(10)
+	declare @masach nvarchar(10),@mathue nvarchar(10),@masach2 nvarchar(10)
 	select @masach= MaSach from deleted
 	select	@mathue= MaThue from deleted,TraSach
 	where TraSach.MaTra=deleted.MaTra
@@ -83,24 +85,32 @@ begin
 
 	declare MaTraCursor cursor for select MaSach from deleted
 	open MaTraCursor
-		fetch next from MaTraCursor into @masach
+		fetch next from MaTraCursor into @masach2
 		while @@FETCH_STATUS=0
 			begin
 				print @mathue
-				print @masach
+				print @masach2
 				update ChiTietThueSach
 				set DaTra=0
-				where MaSach=@masach and MaThue=@mathue
+				where MaSach=@masach2 and MaThue=@mathue
 				update Sach
 				set SoLuong=SoLuong-1
-				where MaSach=@masach
+				where MaSach=@masach2
 
-				fetch next from MaTraCursor into @masach
+				fetch next from MaTraCursor into @masach2
 			end
 	close MaTraCursor
 	deallocate MaTraCursor
 end
 -- Mới
+select * from ChiTietTraSach
+select * from TraSach
+select * from Sach
+
+delete ChiTietTraSach where MaTra = N'TR01'
+go
+delete TraSach where MaTra = N'TR01'
+
 
 --## 3. Khi khách hàng trả sách chỉ hiển thị các sách chưa trả từ mã thuê sách tương ứng.
 create function UnpaidBook(@mathue nvarchar(10))
@@ -118,7 +128,7 @@ select * from UnpaidBook(N'TH01')
 go
 --## 4. Tính Thành tiền trong bảng Chi tiết trả sách
 -- bằng Đơn giá thuê * Số ngày thuê + Tiền phạt (nếu có)
-create trigger TraSachThuVien2 on ChiTietTraSach for insert, update as
+create trigger TinhTien on ChiTietTraSach for insert, update as
 begin
 	declare @masach nvarchar(10),@mathue nvarchar(10),@matra nvarchar(10),@thanhtien int,@tongtien int
 	select @masach= MaSach from inserted
@@ -162,7 +172,7 @@ values
 -- (Đã xong)
 
 --## 7. Báo cáo danh sách các sách truyện đang được thuê chưa trả.
-alter function ReportSachThueChuaTra()
+create function ReportSachThueChuaTra()
 returns table
 	return select TenSach, COUNT(TenSach) as SoLuong
 			from ChiTietThueSach, Sach
@@ -174,7 +184,7 @@ select * from ReportSachThueChuaTra()
 --## 8. Báo cáo tổng tiền cho thuê thu được của cửa hàng theo tháng, quý, năm.
 -- (Đang chỉnh sửa)
 --báo cáo doanh thu tháng
-alter function ChiTietTongTienThueThang(@Thang int, @nam int)
+create function ChiTietTongTienThueThang(@Thang int, @nam int)
 returns table
 	return select day(NgayTra)as Ngay,sum(ThanhTien)as Tong,count(NgayTra) as SoDonHang
 			from ChiTietTraSach,TraSach
@@ -185,7 +195,7 @@ select * from ChiTietTongTienThueThang(11, 2022)
 
 
 -- báo cáo doanh thu năm
-alter function ChiTietTongTienThueNam(@nam int)
+create function ChiTietTongTienThueNam(@nam int)
 returns table
 	return select  month(NgayTra) as Thang,sum(ThanhTien)as Tong, count(NgayTra) as SoDonHang
 			from ChiTietTraSach,TraSach
@@ -257,8 +267,20 @@ returns table
 go
 select * from LoadExistYears()
 -- Lấy ra tháng tồn tại trong các đơn hàng
-alter function LoadExistMonths()
+create function LoadExistMonths()
 returns table
 	return select MONTH(NgayTra) as Thang from TraSach group by (MONTH(NgayTra))
 
 select * from LoadExistMonths()
+
+
+-- Đăng nhập
+create function DangNhap(@username nvarchar(50), @password nvarchar(50))
+returns table
+	return select * from TaiKhoan where TenDangNhap = @username and MatKhau = @password
+
+select * from DangNhap(N'NV01', N'123456')
+
+
+
+

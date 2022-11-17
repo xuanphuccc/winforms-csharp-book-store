@@ -169,6 +169,13 @@ namespace BTLCSharp
             else WindowState = FormWindowState.Normal;
         }
 
-        
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if(result== DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

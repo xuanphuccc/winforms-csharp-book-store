@@ -43,9 +43,12 @@ namespace BTLCSharp.View
 
             cboMonths.DataSource = monthsList;
             cboYears.DataSource = yearsList;
-
-            viewYearReport(cboYears.SelectedItem.ToString());
-            cboMonths.Enabled = false;
+            
+            if(cboYears.Items.Count > 0)
+            {
+                viewYearReport(cboYears.SelectedItem.ToString());
+                cboMonths.Enabled = false;
+            }
         }
 
         private void viewMonthReport(string? month, string ?year)

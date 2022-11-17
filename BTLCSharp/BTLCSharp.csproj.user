@@ -31,6 +31,9 @@
     <Compile Update="View\fHome.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\fRentalManagement.cs">
       <SubType>Form</SubType>
     </Compile>

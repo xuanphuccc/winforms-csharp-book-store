@@ -76,3 +76,4 @@ D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\bin\Debug\net6.0-windows\zh-Hant\
 D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fReportTopTurnover.resources
 D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fReportTurnover.resources
 D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fReportBookStatus.resources
+D:\LearnCS\WinFormsProject\BTLCSharp\BTLCSharp\obj\Debug\net6.0-windows\BTLCSharp.View.fLogin.resources
